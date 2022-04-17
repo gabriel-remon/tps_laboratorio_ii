@@ -1,0 +1,36 @@
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+\\Mac\Home\Desktop\segundo cuatrimestre\programacion_II\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\Gustavo\Desktop\Gabriel\programacion_II-main\trabajosPracticosAux\Remon.Gabriel.2C.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\gustavo\Desktop\programacion\windows form\Remon.Gabirl.2ºC.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
