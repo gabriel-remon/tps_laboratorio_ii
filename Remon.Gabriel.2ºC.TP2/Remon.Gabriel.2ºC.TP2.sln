@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remon.Gabriel.2ºC.TP2", "Remon.Gabriel.2ºC.TP2.csproj", "{465CC3FB-BF79-4365-8B24-C25DAA386074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\tp2\TP-02\Entidades\Entidades.csproj", "{8CF8EFF2-C6B2-44B2-B247-11A4F2ED3CCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{465CC3FB-BF79-4365-8B24-C25DAA386074}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{465CC3FB-BF79-4365-8B24-C25DAA386074}.Debug|anycpu.Build.0 = Debug|anycpu
+		{465CC3FB-BF79-4365-8B24-C25DAA386074}.Release|anycpu.ActiveCfg = Release|anycpu
+		{465CC3FB-BF79-4365-8B24-C25DAA386074}.Release|anycpu.Build.0 = Release|anycpu
+		{8CF8EFF2-C6B2-44B2-B247-11A4F2ED3CCB}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{8CF8EFF2-C6B2-44B2-B247-11A4F2ED3CCB}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{8CF8EFF2-C6B2-44B2-B247-11A4F2ED3CCB}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{8CF8EFF2-C6B2-44B2-B247-11A4F2ED3CCB}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1D34C58-3E48-443C-9C7B-183C6ABBA772}
+	EndGlobalSection
+EndGlobal
