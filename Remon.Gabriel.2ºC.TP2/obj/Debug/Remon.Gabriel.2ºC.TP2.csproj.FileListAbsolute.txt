@@ -1,9 +1,0 @@
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/bin/Debug/Remon.Gabriel.2ºC.TP2.exe
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/bin/Debug/Remon.Gabriel.2ºC.TP2.pdb
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/bin/Debug/Entidades.dll
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/bin/Debug/Entidades.pdb
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/obj/Debug/Remon.Gabriel.2ºC.TP2.csproj.AssemblyReference.cache
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/obj/Debug/Remon.Gabriel.2ºC.TP2.csproj.CoreCompileInputs.cache
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/obj/Debug/Remon.Gabriel.2ºC.TP2.csproj.CopyComplete
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/obj/Debug/Remon.Gabriel.2ºC.TP2.exe
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/obj/Debug/Remon.Gabriel.2ºC.TP2.pdb

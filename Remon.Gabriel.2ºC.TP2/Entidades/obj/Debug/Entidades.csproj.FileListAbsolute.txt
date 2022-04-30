@@ -1,5 +1,0 @@
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/Entidades/bin/Debug/Entidades.dll
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/Entidades/bin/Debug/Entidades.pdb
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/Entidades/obj/Debug/Entidades.csproj.CoreCompileInputs.cache
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/Entidades/obj/Debug/Entidades.dll
-/Users/gabrielremon/Desktop/segundo cuatrimestre/programacion_II/trabajosPracticosAux/aux/Remon.Gabriel.2ºC.TP2/Entidades/obj/Debug/Entidades.pdb
