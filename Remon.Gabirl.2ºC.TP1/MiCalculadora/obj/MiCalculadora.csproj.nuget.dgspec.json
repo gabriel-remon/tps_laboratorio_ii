@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj": {}
+    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\visual studio\\shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj": {
+    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
+        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
         "projectName": "MiCalculadora",
-        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
+        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
         "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\obj\\",
+        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\visual studio\\shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\windows form\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj"
+              "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj"
               }
             }
           }

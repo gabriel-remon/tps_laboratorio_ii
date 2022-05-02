@@ -142,9 +142,9 @@ namespace Entidades
         /// Operando.numero de no ser posible guarda el valor 0 en Operando.numero
         /// </summary>
         /// <param name="strNumero">string del numero que se desea guardar</param>
-        public Operando(string strNumero): this()
+        public Operando(string strNumero)
         {
-            double.TryParse(strNumero, out numero);
+            this.Numero = strNumero;
         }
 
         /// <summary>

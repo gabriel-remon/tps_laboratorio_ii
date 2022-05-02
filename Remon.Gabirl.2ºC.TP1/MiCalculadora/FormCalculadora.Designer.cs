@@ -54,7 +54,7 @@
             this.cmbOperador.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(53, 45);
-            this.cmbOperador.TabIndex = 14;
+            this.cmbOperador.TabIndex = 2;
             // 
             // lblResultado
             // 
@@ -74,7 +74,7 @@
             this.btnConvertirADecimal.Margin = new System.Windows.Forms.Padding(4);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(252, 41);
-            this.btnConvertirADecimal.TabIndex = 2;
+            this.btnConvertirADecimal.TabIndex = 9;
             this.btnConvertirADecimal.Text = "Converir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = true;
             this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
@@ -85,7 +85,7 @@
             this.btnConvertirABinario.Margin = new System.Windows.Forms.Padding(4);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(252, 41);
-            this.btnConvertirABinario.TabIndex = 4;
+            this.btnConvertirABinario.TabIndex = 8;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
             this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvetirABinario_Click);
@@ -96,7 +96,7 @@
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(150, 41);
-            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -107,7 +107,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(150, 41);
-            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -118,7 +118,7 @@
             this.btnOperar.Margin = new System.Windows.Forms.Padding(4);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(150, 41);
-            this.btnOperar.TabIndex = 10;
+            this.btnOperar.TabIndex = 5;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
@@ -130,7 +130,7 @@
             this.txtNumero2.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(179, 43);
-            this.txtNumero2.TabIndex = 11;
+            this.txtNumero2.TabIndex = 3;
             // 
             // txtNumero1
             // 
@@ -139,7 +139,7 @@
             this.txtNumero1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(179, 43);
-            this.txtNumero1.TabIndex = 13;
+            this.txtNumero1.TabIndex = 1;
             // 
             // lstOperaciones
             // 
@@ -150,7 +150,8 @@
             this.lstOperaciones.Margin = new System.Windows.Forms.Padding(4);
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(271, 274);
-            this.lstOperaciones.TabIndex = 15;
+            this.lstOperaciones.TabIndex = 4;
+            this.lstOperaciones.TabStop = false;
             // 
             // FormCalculadora
             // 
