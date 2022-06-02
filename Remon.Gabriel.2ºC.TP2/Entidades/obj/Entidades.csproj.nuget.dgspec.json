@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\auxiliar\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\auxiliar\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\auxiliar\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\auxiliar\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP2\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\auxiliar\\Remon.Gabriel.2ºC.TP2\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP2\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\visual studio\\shared\\NuGetPackages"

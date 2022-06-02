@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "Remon.Gabriel.2ºC.TP3\Forms.csproj", "{2ADE65F0-6983-41D7-88D2-3356370381CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{48245C32-527A-4EE7-9527-0F62FAD0121E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ADE65F0-6983-41D7-88D2-3356370381CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADE65F0-6983-41D7-88D2-3356370381CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADE65F0-6983-41D7-88D2-3356370381CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADE65F0-6983-41D7-88D2-3356370381CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48245C32-527A-4EE7-9527-0F62FAD0121E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48245C32-527A-4EE7-9527-0F62FAD0121E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48245C32-527A-4EE7-9527-0F62FAD0121E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48245C32-527A-4EE7-9527-0F62FAD0121E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51EC2B94-0FAC-4620-94C8-BB15DAB08FB8}
+	EndGlobalSection
+EndGlobal

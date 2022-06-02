@@ -46,35 +46,31 @@ namespace TP_02_2018
             Console.Clear();
 
             // Quito 2 items y muestro
-            // el segundo item no sera eliminado porque nunca fue agregado ya que no habia
-            // espacio en la lista cuando se intento agregar (a4)
             taller -= c1;
             taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
 
-            Console.Clear();
             Console.WriteLine(taller.ToString());
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Vuelvo a agregar c2
-            // c2 no sera agregado porque esta repetido, el item que se elimino anteriormente fue c1
             taller += c2;
 
-            // Muestro solo Ciclomotor
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Ciclomotor));
+            // Muestro solo Moto
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
-            // Muestro solo Sedan
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Sedan));
+            // Muestro solo Automovil
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
-            // Muestro solo SUV
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.SUV));
+            // Muestro solo Camioneta
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.SUV));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }

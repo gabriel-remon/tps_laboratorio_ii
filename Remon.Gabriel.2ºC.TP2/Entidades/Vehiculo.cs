@@ -39,7 +39,6 @@ namespace Entidades
             this.chasis = chasis;
             this.marca = marca;
             this.color = color;
-
         }
 
         #endregion
