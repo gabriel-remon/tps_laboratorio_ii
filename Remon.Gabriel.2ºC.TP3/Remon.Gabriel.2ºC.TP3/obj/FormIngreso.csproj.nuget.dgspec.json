@@ -147,7 +147,11 @@
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj": {
+                "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

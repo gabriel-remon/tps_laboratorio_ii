@@ -11,30 +11,22 @@ namespace Biblioteca.Productos
         protected decimal precio;
         protected int cantidadStock;
         protected int cantidadVendidos;
+        protected int cantidadEstandar;
         protected int codigo;
         protected string descripcion;
 
-        public producto (int codigo, string descripcion)
-            :this(codigo,descripcion,0)
-        {
-
-        }
-        public producto(int codigo, string descripcion,decimal precio)
-            :this(codigo,descripcion,precio,0)
-        {
-        }
-
-        public producto(int codigo, string descripcion, decimal precio, int cantidadStock)
+        public producto(int codigo, string descripcion, decimal precio, int cantidadStock, int cantidadEstandar)
         {
             this.precio = precio;
-            this.codigo = codigo;   
+            this.codigo = codigo;
             this.descripcion = descripcion;
             this.cantidadStock = cantidadStock;
             this.cantidadVendidos = 0;
+            this.cantidadEstandar = cantidadEstandar;
         }
 
         public producto (producto producto, int cantidadVendidos)
-            :this(producto.codigo,producto.descripcion,producto.precio,producto.cantidadStock)
+            :this(producto.codigo,producto.descripcion,producto.precio,producto.cantidadStock,producto.cantidadEstandar)
         {
             this.cantidadVendidos = cantidadVendidos;
         }
@@ -51,6 +43,10 @@ namespace Biblioteca.Productos
         //{
         //    return new producto(producto, cantidadVentas);
         //}
+        public override string ToString()
+        {
+            return $"{codigo}  {descripcion} {precio.ToString("D")} c/u";
+        }
 
         public virtual string MostrarVenta()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Personas
 {
-    public class Cliente:Usuarios
+    public class Cliente : Usuarios
     {
         public enum SituacionFiscal
         {
@@ -16,35 +16,24 @@ namespace Biblioteca.Personas
             Otros
         }
         protected SituacionFiscal estadoFiscal;
-        protected Dictionary<DateTime,List<Productos.producto>> compras;
+        protected Dictionary<DateTime, List<Productos.producto>> compras;
 
-        public Cliente(string nombre,string apellido,DateTime fechaNacimiento,int dni,
-                        string usuiario, string contraseña, SituacionFiscal estadoFiscal)
-            :base(nombre,apellido,fechaNacimiento,dni,usuiario,contraseña)
+        public Cliente(string nombre, string apellido, DateTime fechaNacimiento, int dni,
+                         string contraseña, SituacionFiscal estadoFiscal)
+            : base(nombre, apellido, fechaNacimiento, dni, contraseña)
         {
-            this.compras = new Dictionary<DateTime,List<Productos.producto>>(); 
+            this.compras = new Dictionary<DateTime, List<Productos.producto>>();
             this.estadoFiscal = estadoFiscal;
         }
         public override string Mostrar()
         {
-            decimal aux=0;
+            decimal aux = 0;
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine((string)this);
-            sb.AppendLine($"Estado Fiscal");
+            sb.AppendLine($"Estado Fiscal = { this.estadoFiscal}");
 
-            foreach(var unaCompra in this.compras)
-            {
-                sb.AppendLine($"fecha de la comra: {unaCompra.Key.ToString("d")}");
-                sb.AppendLine($"Codigo     Descripcion       valor unitario       sub total");
-                foreach(Productos.producto producto in unaCompra.Value)
-                {
-                    sb.AppendLine(producto.MostrarVenta());
-                    aux += producto.SubTotal;
-                }
-                sb.AppendLine($"Total de la compra : {aux}$");
-                sb.AppendLine();
-            }
+            
 
 
             return sb.ToString();
@@ -52,12 +41,21 @@ namespace Biblioteca.Personas
 
         public static bool operator +(Cliente cliente, List<Productos.producto> compra)
         {
-            if(compra is not null && cliente is not null)
+            if (compra is not null && cliente is not null)
             {
                 cliente.compras.Add(DateTime.Today, compra);
                 return true;
             }
             return false;
         }
+
+        //public static bool operator ==(Cliente c1, Cliente c2)
+        //{
+        //    return c1.dni==c2.dni;
+        //}
+        //public static bool operator !=(Cliente c1, Cliente c2)
+        //{
+        //    return !(c1 == c2); 
+        //}
     }
 }

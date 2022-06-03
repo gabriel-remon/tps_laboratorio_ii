@@ -24,7 +24,8 @@ namespace Biblioteca.Personas
         {
             get
             {
-                return DateTime.Today.AddTicks(-this.fechaNacimiento.Ticks).Year -1;
+                
+                return (int)Math.Floor((DateTime.Now - fechaNacimiento).TotalDays / 365);
             }
         }
 

@@ -23,31 +23,17 @@ namespace Biblioteca.Productos
         protected float largo;
         protected TipoCaño tipoCaño;
 
-        public Caños(int codigo,decimal precio,int cantidadStok,
+        public Caños(int codigo,decimal precio,int cantidadStok,int cantidadEstandar,
                     float diametro, float largo, TipoCaño tipoCaño)
-            :base(codigo,$"{tipoCaño} diametro {diametro}",precio,cantidadStok)
+            :base(codigo,$"{tipoCaño} diametro {diametro}",precio,cantidadStok, cantidadEstandar)
         {
             this.diametro = diametro;
             this.largo = largo;
             this.tipoCaño = tipoCaño;
         }
 
-        public Caños(int codigo, decimal precio,
-                    float diametro, float largo, TipoCaño tipoCaño)
-            : this(codigo,precio,0,diametro,largo,tipoCaño)
-        {
-        }
 
-        public Caños(int codigo,
-                    float diametro, float largo, TipoCaño tipoCaño)
-            : this(codigo,0,0,diametro,largo,tipoCaño)
-        {
-        }
-
-        public Caños(Caños caño, int cantidadStok)
-            : this(caño.codigo,caño.precio,caño.cantidadStock,caño.diametro,caño.largo,caño.tipoCaño)
-        {
-        }
+       
 
         public override string MostrarVenta()
         {

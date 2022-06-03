@@ -27,9 +27,9 @@ namespace Biblioteca.Productos
         protected Paso paso;
         protected TipoTornillo tipoTornillo;
 
-        public Tornillos(int codigo,int precio , int cantidadStock,
+        public Tornillos(int codigo,int precio , int cantidadStock,int cantidadEstandar,
                         Paso paso, TipoTornillo tipoTornillo)
-            :base(codigo,$"Tornillo {tipoTornillo} metrica: {paso}",precio,cantidadStock)
+            :base(codigo,$"Tornillo {tipoTornillo} metrica: {paso}",precio,cantidadStock,cantidadEstandar)
         {
             this.paso = paso;
             this.tipoTornillo = tipoTornillo;

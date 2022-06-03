@@ -7,14 +7,52 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "FormIngreso/1.0.0": {
+        "dependencies": {
+          "Archivos": "1.0.0",
+          "Biblioteca": "1.0.0",
+          "Forms": "1.0.0"
+        },
         "runtime": {
           "FormIngreso.dll": {}
+        }
+      },
+      "Archivos/1.0.0": {
+        "runtime": {
+          "Archivos.dll": {}
+        }
+      },
+      "Biblioteca/1.0.0": {
+        "runtime": {
+          "Biblioteca.dll": {}
+        }
+      },
+      "Forms/1.0.0": {
+        "dependencies": {
+          "Biblioteca": "1.0.0"
+        },
+        "runtime": {
+          "Forms.dll": {}
         }
       }
     }
   },
   "libraries": {
     "FormIngreso/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Archivos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Biblioteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Forms/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,12 @@
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\bin\Debug\net5.0\Archivos.deps.json
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\bin\Debug\net5.0\Archivos.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\bin\Debug\net5.0\Archivos.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.csproj.AssemblyReference.cache
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.GeneratedMSBuildEditorConfig.editorconfig
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.AssemblyInfoInputs.cache
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.AssemblyInfo.cs
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.csproj.CoreCompileInputs.cache
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\refint\Archivos.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\Archivos.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Archivos\obj\Debug\net5.0\ref\Archivos.dll

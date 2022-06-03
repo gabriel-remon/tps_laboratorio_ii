@@ -12,10 +12,10 @@ namespace Biblioteca.Personas
         protected string contraseña;
 
         public Usuarios(string nombre, string apellido, DateTime fechaNacimiento, int dni,
-                       string usuario, string contraseña)
+                        string contraseña)
             :base(nombre,apellido,fechaNacimiento,dni)
         {
-            this.usuario = usuario;
+            this.usuario = dni.ToString();
             this.contraseña = contraseña;
         }
 
@@ -23,7 +23,7 @@ namespace Biblioteca.Personas
         {
             get
             {
-                return usuario; 
+                return this.usuario; 
             }
         }
 

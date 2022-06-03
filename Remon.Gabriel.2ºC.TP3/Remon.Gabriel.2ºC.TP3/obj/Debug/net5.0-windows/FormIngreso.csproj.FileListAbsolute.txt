@@ -5,7 +5,6 @@ D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\FormIngreso.dll
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\FormIngreso.pdb
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.csproj.AssemblyReference.cache
-D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\Remon.Gabriel._2ºC.TP3.Form1.resources
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.csproj.GenerateResource.cache
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.GeneratedMSBuildEditorConfig.editorconfig
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.AssemblyInfoInputs.cache
@@ -16,3 +15,15 @@ D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.pdb
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.genruntimeconfig.cache
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\ref\FormIngreso.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\Remon.Gabriel._2ºC.TP3.Login.resources
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.deps.json
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.runtimeconfig.json
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.runtimeconfig.dev.json
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.exe
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Archivos.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Biblioteca.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Archivos.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Biblioteca.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\bin\Debug\net5.0-windows\Forms.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Remon.Gabriel.2ºC.TP3\obj\Debug\net5.0-windows\FormIngreso.csproj.CopyComplete
