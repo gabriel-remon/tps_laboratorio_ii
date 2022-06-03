@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Biblioteca
+namespace Archivos
 {
     public class Class1
     {

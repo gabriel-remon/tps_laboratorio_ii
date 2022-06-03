@@ -1,30 +1,84 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "Archivos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Archivos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Archivos.dll": {}
+        }
+      },
+      "Biblioteca/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Biblioteca.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Biblioteca.dll": {}
+        }
+      },
+      "Forms/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Forms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Forms.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Archivos/1.0.0": {
+      "type": "project",
+      "path": "../Archivos/Archivos.csproj",
+      "msbuildProject": "../Archivos/Archivos.csproj"
+    },
+    "Biblioteca/1.0.0": {
+      "type": "project",
+      "path": "../Biblioteca/Biblioteca.csproj",
+      "msbuildProject": "../Biblioteca/Biblioteca.csproj"
+    },
+    "Forms/1.0.0": {
+      "type": "project",
+      "path": "../Forms/Forms.csproj",
+      "msbuildProject": "../Forms/Forms.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "Archivos >= 1.0.0",
+      "Biblioteca >= 1.0.0",
+      "Forms >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\gustavo\\.nuget\\packages\\": {},
-    "D:\\visual studio\\shared\\NuGetPackages": {}
+    "C:\\Users\\gabriel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
-      "projectName": "Forms",
-      "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
-      "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\obj\\",
+      "projectUniqueName": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\FormIngreso.csproj",
+      "projectName": "FormIngreso",
+      "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\FormIngreso.csproj",
+      "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
+      "outputPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\visual studio\\shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -38,7 +92,17 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Archivos\\Archivos.csproj": {
+              "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Archivos\\Archivos.csproj"
+            },
+            "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj": {
+              "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj"
+            },
+            "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Forms\\Forms.csproj": {
+              "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Forms\\Forms.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -68,7 +132,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

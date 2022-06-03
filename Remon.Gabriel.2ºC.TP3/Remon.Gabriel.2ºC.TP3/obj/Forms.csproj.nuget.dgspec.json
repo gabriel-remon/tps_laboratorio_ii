@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj": {}
+    "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj": {
+    "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
+        "projectUniqueName": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
         "projectName": "Forms",
-        "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
-        "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\obj\\",
+        "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\Forms.csproj",
+        "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
+        "outputPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Remon.Gabriel.2ºC.TP3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\visual studio\\shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,6 +53,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -61,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
