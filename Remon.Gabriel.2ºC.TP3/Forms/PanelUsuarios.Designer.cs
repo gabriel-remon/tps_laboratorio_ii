@@ -37,6 +37,7 @@
             this.listPedidos = new System.Windows.Forms.ListBox();
             this.labListaPedidos = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnNuevoEmpleado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGenerarPedido
@@ -60,7 +61,7 @@
             // 
             // btnNuevoProducto
             // 
-            this.btnNuevoProducto.Location = new System.Drawing.Point(12, 150);
+            this.btnNuevoProducto.Location = new System.Drawing.Point(12, 196);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Size = new System.Drawing.Size(180, 40);
             this.btnNuevoProducto.TabIndex = 2;
@@ -80,16 +81,17 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(12, 196);
+            this.btnActualizar.Location = new System.Drawing.Point(12, 242);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(180, 40);
             this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar stock";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnPedidoDistribuidora
             // 
-            this.btnPedidoDistribuidora.Location = new System.Drawing.Point(12, 242);
+            this.btnPedidoDistribuidora.Location = new System.Drawing.Point(12, 292);
             this.btnPedidoDistribuidora.Name = "btnPedidoDistribuidora";
             this.btnPedidoDistribuidora.Size = new System.Drawing.Size(180, 40);
             this.btnPedidoDistribuidora.TabIndex = 5;
@@ -102,7 +104,7 @@
             this.listPedidos.ItemHeight = 15;
             this.listPedidos.Location = new System.Drawing.Point(220, 58);
             this.listPedidos.Name = "listPedidos";
-            this.listPedidos.Size = new System.Drawing.Size(230, 274);
+            this.listPedidos.Size = new System.Drawing.Size(234, 319);
             this.listPedidos.TabIndex = 6;
             // 
             // labListaPedidos
@@ -114,21 +116,33 @@
             this.labListaPedidos.Size = new System.Drawing.Size(185, 25);
             this.labListaPedidos.TabIndex = 7;
             this.labListaPedidos.Text = "Pedidos pendientes";
+            this.labListaPedidos.Click += new System.EventHandler(this.labListaPedidos_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 288);
+            this.btnSalir.Location = new System.Drawing.Point(12, 338);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(180, 40);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // btnNuevoEmpleado
+            // 
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(12, 150);
+            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(180, 40);
+            this.btnNuevoEmpleado.TabIndex = 9;
+            this.btnNuevoEmpleado.Text = "Cargar nuevo Empleado";
+            this.btnNuevoEmpleado.UseVisualStyleBackColor = true;
+            this.btnNuevoEmpleado.Click += new System.EventHandler(this.btnNuevoEmpleado_Click);
+            // 
             // PanelUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 362);
+            this.ClientSize = new System.Drawing.Size(474, 408);
+            this.Controls.Add(this.btnNuevoEmpleado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.labListaPedidos);
             this.Controls.Add(this.listPedidos);
@@ -138,8 +152,11 @@
             this.Controls.Add(this.btnNuevoProducto);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnGenerarPedido);
+            this.MaximizeBox = false;
             this.Name = "PanelUsuarios";
             this.Text = "Empleados";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelUsuarios_FormClosing);
             this.Load += new System.EventHandler(this.PanelUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,5 +174,6 @@
         private System.Windows.Forms.ListBox listPedidos;
         private System.Windows.Forms.Label labListaPedidos;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnNuevoEmpleado;
     }
 }

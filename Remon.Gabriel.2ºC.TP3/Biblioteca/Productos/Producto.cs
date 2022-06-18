@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Productos
 {
-    public class producto
+    public class Producto
     {
         protected decimal precio;
         protected int cantidadStock;
@@ -15,7 +15,7 @@ namespace Biblioteca.Productos
         protected int codigo;
         protected string descripcion;
 
-        public producto(int codigo, string descripcion, decimal precio, int cantidadStock, int cantidadEstandar)
+        public Producto(int codigo, string descripcion, decimal precio, int cantidadStock, int cantidadEstandar)
         {
             this.precio = precio;
             this.codigo = codigo;
@@ -25,10 +25,29 @@ namespace Biblioteca.Productos
             this.cantidadEstandar = cantidadEstandar;
         }
 
-        public producto (producto producto, int cantidadVendidos)
+        public Producto (Producto producto, int cantidadVendidos)
             :this(producto.codigo,producto.descripcion,producto.precio,producto.cantidadStock,producto.cantidadEstandar)
         {
             this.cantidadVendidos = cantidadVendidos;
+        }
+
+        public decimal Precio
+        {
+            get
+            {
+                return this.precio;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this.precio = value;
+                }
+                else
+                {
+                    throw new Exception("Error, Solo se puede ingresar valores positivos");
+                }
+            }
         }
 
         public decimal SubTotal
@@ -37,15 +56,27 @@ namespace Biblioteca.Productos
             {
                 return this.cantidadVendidos * this.precio;
             }
+            
+        }
+        public int Id
+        {
+            get
+            {
+                return this.codigo;
+            }
+            
         }
 
         //public static producto RealizarVenta(producto producto, int cantidadVentas)
         //{
         //    return new producto(producto, cantidadVentas);
         //}
+
+     
         public override string ToString()
         {
-            return $"{codigo}  {descripcion} {precio.ToString("D")} c/u";
+            //return $"{codigo.ToString()}  {descripcion}  c/u";
+            return $"codigo: {codigo.ToString()}    {descripcion}    {precio.ToString("C")} c/u";
         }
 
         public virtual string MostrarVenta()
@@ -53,11 +84,11 @@ namespace Biblioteca.Productos
             return $"{codigo}  {descripcion} {precio}$ {cantidadVendidos * precio}$ ";
         }
 
-        public static bool operator ==(producto p1, producto p2)
+        public static bool operator ==(Producto p1, Producto p2)
         {
             return p1.codigo == p2.codigo;
         }
-        public static bool operator !=(producto p1, producto p2)
+        public static bool operator !=(Producto p1, Producto p2)
         {
             return !(p1 == p2);
         }

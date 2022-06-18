@@ -16,19 +16,28 @@ namespace Forms
     public partial class CargarUsuarios : Form
     {
         Ferreteria ferreteria;
-        bool modoCliente;
-        public CargarUsuarios(Ferreteria ferreteria)
+        TipoUsuario usuarioLogeado;
+        public CargarUsuarios(Ferreteria ferreteria, TipoUsuario usuarioLogeado)
         {
             InitializeComponent();
             this.ferreteria = ferreteria;
-            this.cmbEnum.DataSource = Enum.GetValues(typeof(Biblioteca.Personas.Empleado.Cargo));
-            modoCliente = false;
-        }
-        public CargarUsuarios(Ferreteria ferreteria, bool modoCliente)
-            :this(ferreteria)
-        {
-            this.modoCliente = modoCliente;
+            this.usuarioLogeado = usuarioLogeado;
 
+            switch(usuarioLogeado)
+            {
+                case TipoUsuario.Admin:
+                    this.ModoAdmin();
+                    break;
+                case TipoUsuario.Empleado:
+                    this.ModoEmpleado();
+                    break;
+                default:
+                    throw new Exception("No cuenta con permisos necesarios");
+            }
+        }
+
+        private void ModoEmpleado()
+        {
             this.labContratacion.Visible = false;
             this.textSueldo.Visible = false;
             this.labSueldo.Visible = false;
@@ -38,12 +47,17 @@ namespace Forms
             this.labTitulo.Text = "Cargar nuevo cliente";
             this.cmbEnum.DataSource = Enum.GetValues(typeof(Biblioteca.Personas.Cliente.SituacionFiscal));
         }
+        
+        private void ModoAdmin()
+        {
+            this.cmbEnum.DataSource = Enum.GetValues(typeof(Biblioteca.Personas.Empleado.Cargo));
+        }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
             try
             {
-                if(modoCliente)
+                if(this.usuarioLogeado == TipoUsuario.Empleado)
                 {
                     ferreteria = ferreteria + new Cliente(nombre: textNombre.Text,
                                                            apellido: textApellido.Text,
@@ -60,12 +74,11 @@ namespace Forms
                                                            apellido: textApellido.Text,
                                                            fechaNacimiento: dateTimeNacimiento.Value,
                                                            dni: int.Parse(textDni.Text),
-                                                          
                                                            contraseña: textContraseña.Text,
                                                            fechaContratacion: dateTimeContratacion.Value,
                                                            sueldo: decimal.Parse(textSueldo.Text),
                                                            cargo: (Empleado.Cargo) cmbEnum.SelectedItem);
-                    richTextLista.Text = ferreteria.MostrarEmpleados();
+                    //richTextLista.Text = ferreteria.MostrarEmpleados();
                 }
                 MessageBox.Show("Operacion realizada con exito");
                 Reset();
@@ -96,10 +109,10 @@ namespace Forms
 
         private void CargarUsuarios_Load(object sender, EventArgs e)
         {
-            if (modoCliente)
-                richTextLista.Text = ferreteria.MostrarClientes();
-            else
-                richTextLista.Text = ferreteria.MostrarEmpleados();
+            //if (modoCliente)
+            //    richTextLista.Text = ferreteria.MostrarClientes();
+            //else
+            //    richTextLista.Text = ferreteria.MostrarEmpleados();
 
 
         }

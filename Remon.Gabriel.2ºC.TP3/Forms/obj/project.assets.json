@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Archivos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Archivos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Archivos.dll": {}
+        }
+      },
       "Biblioteca/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "Archivos/1.0.0": {
+      "type": "project",
+      "path": "../Archivos/Archivos.csproj",
+      "msbuildProject": "../Archivos/Archivos.csproj"
+    },
     "Biblioteca/1.0.0": {
       "type": "project",
       "path": "../Biblioteca/Biblioteca.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "Archivos >= 1.0.0",
       "Biblioteca >= 1.0.0"
     ]
   },
@@ -58,6 +74,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Archivos\\Archivos.csproj": {
+              "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Archivos\\Archivos.csproj"
+            },
             "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj": {
               "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabriel.2ºC.TP3\\Biblioteca\\Biblioteca.csproj"
             }

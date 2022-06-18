@@ -48,7 +48,6 @@
             this.btnAñador = new System.Windows.Forms.Button();
             this.textCodigo = new System.Windows.Forms.TextBox();
             this.textLargoTornillo = new System.Windows.Forms.TextBox();
-            this.textMetrica = new System.Windows.Forms.TextBox();
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.textDescripcion = new System.Windows.Forms.TextBox();
             this.textStockActual = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.textLargoCaño = new System.Windows.Forms.TextBox();
             this.combTipoCaño = new System.Windows.Forms.ComboBox();
             this.combTipoTornillo = new System.Windows.Forms.ComboBox();
+            this.cmbMetrica = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labCodigo
@@ -107,6 +107,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // labDescripcion
             // 
@@ -250,14 +251,6 @@
             this.textLargoTornillo.Size = new System.Drawing.Size(100, 23);
             this.textLargoTornillo.TabIndex = 19;
             // 
-            // textMetrica
-            // 
-            this.textMetrica.Enabled = false;
-            this.textMetrica.Location = new System.Drawing.Point(184, 76);
-            this.textMetrica.Name = "textMetrica";
-            this.textMetrica.Size = new System.Drawing.Size(100, 23);
-            this.textMetrica.TabIndex = 21;
-            // 
             // textPrecio
             // 
             this.textPrecio.Location = new System.Drawing.Point(26, 193);
@@ -296,6 +289,7 @@
             // 
             // combTipoCaño
             // 
+            this.combTipoCaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combTipoCaño.Enabled = false;
             this.combTipoCaño.FormattingEnabled = true;
             this.combTipoCaño.Location = new System.Drawing.Point(330, 137);
@@ -305,6 +299,7 @@
             // 
             // combTipoTornillo
             // 
+            this.combTipoTornillo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combTipoTornillo.Enabled = false;
             this.combTipoTornillo.FormattingEnabled = true;
             this.combTipoTornillo.Location = new System.Drawing.Point(184, 137);
@@ -312,11 +307,22 @@
             this.combTipoTornillo.Size = new System.Drawing.Size(101, 23);
             this.combTipoTornillo.TabIndex = 28;
             // 
+            // cmbMetrica
+            // 
+            this.cmbMetrica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMetrica.Enabled = false;
+            this.cmbMetrica.FormattingEnabled = true;
+            this.cmbMetrica.Location = new System.Drawing.Point(184, 76);
+            this.cmbMetrica.Name = "cmbMetrica";
+            this.cmbMetrica.Size = new System.Drawing.Size(101, 23);
+            this.cmbMetrica.TabIndex = 29;
+            // 
             // CargarNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 333);
+            this.Controls.Add(this.cmbMetrica);
             this.Controls.Add(this.combTipoTornillo);
             this.Controls.Add(this.combTipoCaño);
             this.Controls.Add(this.textLargoCaño);
@@ -324,7 +330,6 @@
             this.Controls.Add(this.textStockActual);
             this.Controls.Add(this.textDescripcion);
             this.Controls.Add(this.textPrecio);
-            this.Controls.Add(this.textMetrica);
             this.Controls.Add(this.textLargoTornillo);
             this.Controls.Add(this.textCodigo);
             this.Controls.Add(this.btnAñador);
@@ -347,6 +352,7 @@
             this.Controls.Add(this.labCodigo);
             this.Name = "CargarNuevoProducto";
             this.Text = "CargarNuevoProducto";
+            this.Load += new System.EventHandler(this.CargarNuevoProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,7 +380,6 @@
         private System.Windows.Forms.Button btnAñador;
         private System.Windows.Forms.TextBox textCodigo;
         private System.Windows.Forms.TextBox textLargoTornillo;
-        private System.Windows.Forms.TextBox textMetrica;
         private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.TextBox textDescripcion;
         private System.Windows.Forms.TextBox textStockActual;
@@ -382,5 +387,6 @@
         private System.Windows.Forms.TextBox textLargoCaño;
         private System.Windows.Forms.ComboBox combTipoCaño;
         private System.Windows.Forms.ComboBox combTipoTornillo;
+        private System.Windows.Forms.ComboBox cmbMetrica;
     }
 }

@@ -1,0 +1,3 @@
+Pedidos de la ferreteria: 
+Cantidad: 11  - codigo: 123  descripcion del productomanguera 
+

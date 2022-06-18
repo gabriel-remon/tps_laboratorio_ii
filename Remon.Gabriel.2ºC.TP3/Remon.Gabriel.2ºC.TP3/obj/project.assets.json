@@ -26,6 +26,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Archivos": "1.0.0",
           "Biblioteca": "1.0.0"
         },
         "compile": {

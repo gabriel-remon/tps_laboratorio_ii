@@ -28,23 +28,28 @@ namespace Remon.Gabriel._2ºC.TP3
 
         private void BtnLoging_Click(object sender, EventArgs e)
         {
-            PanelUsuarios panelUsuarios;
+            Form panelUsuarios = null;
 
 
             switch(loging(RdUsuarios.Checked,RdEmpleados.Checked,TxbContraseña.Text,TxbUsuario.Text))
             {
                 case 1:
-                    CargarUsuarios cargarUsuarios = new CargarUsuarios(this.ferreteria);
-                    cargarUsuarios.Show();
+                    //CargarUsuarios cargarUsuarios = new CargarUsuarios(this.ferreteria);
+                   
+                    //cargarUsuarios.ShowDialog();
+                    panelUsuarios = new CargarUsuarios(this.ferreteria);
+
+                    
                     break;
                 case 2:
                     panelUsuarios = new PanelUsuarios(this.ferreteria,false);
-                    panelUsuarios.Show();
+                  
+                    //panelUsuarios.ShowDialog();
                     break;
 
                 case 3:
                     panelUsuarios = new PanelUsuarios(this.ferreteria);
-                    panelUsuarios.Show();
+                   // panelUsuarios.ShowDialog();
                     break;
 
                 default:
@@ -52,6 +57,8 @@ namespace Remon.Gabriel._2ºC.TP3
 
                     break;
             }
+            if(panelUsuarios is not null)
+                    panelUsuarios.ShowDialog();
         }
 
         private int loging(bool clientesCheck, bool empleadosCheck,string contraseña, string usuario)

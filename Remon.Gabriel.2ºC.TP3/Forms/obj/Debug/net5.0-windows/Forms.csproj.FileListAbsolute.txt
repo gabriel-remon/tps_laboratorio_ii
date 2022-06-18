@@ -25,3 +25,6 @@ D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\obj\Debug\net5.0
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\bin\Debug\net5.0-windows\Biblioteca.dll
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\bin\Debug\net5.0-windows\Biblioteca.pdb
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\obj\Debug\net5.0-windows\Forms.csproj.CopyComplete
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\bin\Debug\net5.0-windows\Archivos.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\bin\Debug\net5.0-windows\Archivos.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP3\Forms\obj\Debug\net5.0-windows\Forms.Login.resources

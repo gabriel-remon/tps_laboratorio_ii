@@ -20,6 +20,14 @@ namespace Biblioteca.Personas
             this.dni = dni;
         }
 
+        public int Dni
+        {
+            get
+            {
+                return this.Dni;
+            }
+        }
+
         public int EdadActual
         {
             get

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Productos
 {
-    public class Caños:producto
+    public class Caños:Producto
     {
         public enum TipoCaño
         {
@@ -23,14 +23,16 @@ namespace Biblioteca.Productos
         protected float largo;
         protected TipoCaño tipoCaño;
 
-        public Caños(int codigo,decimal precio,int cantidadStok,int cantidadEstandar,
+        public Caños(int codigo,decimal precio,int cantidadStock, int cantidadEstandar,
                     float diametro, float largo, TipoCaño tipoCaño)
-            :base(codigo,$"{tipoCaño} diametro {diametro}",precio,cantidadStok, cantidadEstandar)
+            :base(codigo,$"{tipoCaño} diametro {diametro}",precio, cantidadStock, cantidadEstandar)
         {
             this.diametro = diametro;
             this.largo = largo;
             this.tipoCaño = tipoCaño;
         }
+
+      //  public Caños(pro)
 
 
        

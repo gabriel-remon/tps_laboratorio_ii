@@ -30,7 +30,7 @@
         {
             this.labInformacionCliente = new System.Windows.Forms.Label();
             this.listProductos = new System.Windows.Forms.ListBox();
-            this.listCleintes = new System.Windows.Forms.ListBox();
+            this.lstClientes = new System.Windows.Forms.ListBox();
             this.listPedidos = new System.Windows.Forms.ListBox();
             this.textDniClientes = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
@@ -58,15 +58,17 @@
             this.listProductos.Name = "listProductos";
             this.listProductos.Size = new System.Drawing.Size(164, 124);
             this.listProductos.TabIndex = 1;
+            this.listProductos.DoubleClick += new System.EventHandler(this.listProductos_DoubleClick);
             // 
-            // listCleintes
+            // lstClientes
             // 
-            this.listCleintes.FormattingEnabled = true;
-            this.listCleintes.ItemHeight = 15;
-            this.listCleintes.Location = new System.Drawing.Point(267, 75);
-            this.listCleintes.Name = "listCleintes";
-            this.listCleintes.Size = new System.Drawing.Size(158, 124);
-            this.listCleintes.TabIndex = 2;
+            this.lstClientes.FormattingEnabled = true;
+            this.lstClientes.ItemHeight = 15;
+            this.lstClientes.Location = new System.Drawing.Point(267, 75);
+            this.lstClientes.Name = "lstClientes";
+            this.lstClientes.Size = new System.Drawing.Size(158, 124);
+            this.lstClientes.TabIndex = 2;
+            this.lstClientes.DoubleClick += new System.EventHandler(this.listCleintes_DoubleClick);
             // 
             // listPedidos
             // 
@@ -83,6 +85,7 @@
             this.textDniClientes.Name = "textDniClientes";
             this.textDniClientes.Size = new System.Drawing.Size(158, 23);
             this.textDniClientes.TabIndex = 4;
+            this.textDniClientes.TextChanged += new System.EventHandler(this.textDniClientes_TextChanged);
             // 
             // btnCargar
             // 
@@ -92,6 +95,7 @@
             this.btnCargar.TabIndex = 5;
             this.btnCargar.Text = "Cargar pedido";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnSalir
             // 
@@ -101,6 +105,7 @@
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // textCodigoProducto
             // 
@@ -108,6 +113,7 @@
             this.textCodigoProducto.Name = "textCodigoProducto";
             this.textCodigoProducto.Size = new System.Drawing.Size(164, 23);
             this.textCodigoProducto.TabIndex = 7;
+            this.textCodigoProducto.TextChanged += new System.EventHandler(this.textCodigoProducto_TextChanged);
             // 
             // labpedidos
             // 
@@ -149,11 +155,12 @@
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.textDniClientes);
             this.Controls.Add(this.listPedidos);
-            this.Controls.Add(this.listCleintes);
+            this.Controls.Add(this.lstClientes);
             this.Controls.Add(this.listProductos);
             this.Controls.Add(this.labInformacionCliente);
             this.Name = "CargarPedido";
             this.Text = "CargarPedido";
+            this.Load += new System.EventHandler(this.CargarPedido_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +170,7 @@
 
         private System.Windows.Forms.Label labInformacionCliente;
         private System.Windows.Forms.ListBox listProductos;
-        private System.Windows.Forms.ListBox listCleintes;
+        private System.Windows.Forms.ListBox lstClientes;
         private System.Windows.Forms.ListBox listPedidos;
         private System.Windows.Forms.TextBox textDniClientes;
         private System.Windows.Forms.Button btnCargar;

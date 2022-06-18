@@ -16,13 +16,13 @@ namespace Biblioteca.Personas
             Otros
         }
         protected SituacionFiscal estadoFiscal;
-        protected Dictionary<DateTime, List<Productos.producto>> compras;
+        protected Dictionary<DateTime, List<Productos.Producto>> compras;
 
         public Cliente(string nombre, string apellido, DateTime fechaNacimiento, int dni,
                          string contraseña, SituacionFiscal estadoFiscal)
             : base(nombre, apellido, fechaNacimiento, dni, contraseña)
         {
-            this.compras = new Dictionary<DateTime, List<Productos.producto>>();
+            this.compras = new Dictionary<DateTime, List<Productos.Producto>>();
             this.estadoFiscal = estadoFiscal;
         }
         public override string Mostrar()
@@ -39,7 +39,7 @@ namespace Biblioteca.Personas
             return sb.ToString();
         }
 
-        public static bool operator +(Cliente cliente, List<Productos.producto> compra)
+        public static bool operator +(Cliente cliente, List<Productos.Producto> compra)
         {
             if (compra is not null && cliente is not null)
             {

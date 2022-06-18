@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Biblioteca.Productos.Caños">
+    <Position X="6.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Biblioteca.Productos.Caños.TipoCaño" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Productos\Caños.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAACAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Productos\Caños.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Productos.producto">
+    <Position X="3.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAAQAAAAAAAAAAAEAAAAAAAAAEEAAIAAAAAAAAiA=</HashCode>
+      <FileName>Productos\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Productos.Tornillos">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Biblioteca.Productos.Tornillos.TipoTornillo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Productos\Tornillos.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Biblioteca.Productos.Tornillos.Paso" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Productos\Tornillos.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Productos\Tornillos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -52,6 +52,8 @@
             this.listProdcutos.Name = "listProdcutos";
             this.listProdcutos.Size = new System.Drawing.Size(287, 244);
             this.listProdcutos.TabIndex = 1;
+            this.listProdcutos.SelectedIndexChanged += new System.EventHandler(this.listProdcutos_SelectedIndexChanged);
+            this.listProdcutos.DoubleClick += new System.EventHandler(this.listProdcutos_DoubleClick);
             // 
             // btnSalir
             // 
@@ -61,6 +63,7 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtCodigo
             // 
@@ -68,6 +71,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(157, 23);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // labListaProductos
             // 
@@ -91,6 +95,7 @@
             this.Controls.Add(this.labCodigo);
             this.Name = "ListaProductos";
             this.Text = "ListaProductos";
+            this.Load += new System.EventHandler(this.ListaProductos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

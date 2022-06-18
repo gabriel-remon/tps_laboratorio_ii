@@ -33,6 +33,7 @@
             this.txtStockNuevo = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblPrecioAtual = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labStockActual
@@ -40,9 +41,9 @@
             this.labStockActual.AutoSize = true;
             this.labStockActual.Location = new System.Drawing.Point(13, 30);
             this.labStockActual.Name = "labStockActual";
-            this.labStockActual.Size = new System.Drawing.Size(92, 15);
+            this.labStockActual.Size = new System.Drawing.Size(85, 15);
             this.labStockActual.TabIndex = 0;
-            this.labStockActual.Text = "Stock actual = X";
+            this.labStockActual.Text = "Stock actual = ";
             // 
             // labStockNuevo
             // 
@@ -68,6 +69,7 @@
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -77,12 +79,23 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblPrecioAtual
+            // 
+            this.lblPrecioAtual.AutoSize = true;
+            this.lblPrecioAtual.Location = new System.Drawing.Point(104, 30);
+            this.lblPrecioAtual.Name = "lblPrecioAtual";
+            this.lblPrecioAtual.Size = new System.Drawing.Size(38, 15);
+            this.lblPrecioAtual.TabIndex = 5;
+            this.lblPrecioAtual.Text = "label1";
             // 
             // NuevoStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 170);
+            this.Controls.Add(this.lblPrecioAtual);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtStockNuevo);
@@ -90,6 +103,7 @@
             this.Controls.Add(this.labStockActual);
             this.Name = "NuevoStock";
             this.Text = "NuevoStock";
+            this.Load += new System.EventHandler(this.NuevoStock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +116,6 @@
         private System.Windows.Forms.TextBox txtStockNuevo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblPrecioAtual;
     }
 }
