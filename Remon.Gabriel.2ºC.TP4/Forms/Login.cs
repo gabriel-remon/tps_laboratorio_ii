@@ -107,9 +107,8 @@ namespace Forms
             {
                 while(true)
                 {
-
                     ComprobarActualizacion();
-                    Thread.Sleep(15000);
+                    Thread.Sleep(10000);
                 }
             });
         }
