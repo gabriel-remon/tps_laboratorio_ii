@@ -16,8 +16,8 @@ namespace Forms
 {
     public partial class CargarPedido : Form
     {
-        Ferreteria ferreteria;
-        Venta venta;
+        private Ferreteria ferreteria;
+        private Venta venta;
         
 
         public CargarPedido(Ferreteria ferreteria)
@@ -27,10 +27,24 @@ namespace Forms
             this.venta = new Venta();
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
+        public CargarPedido(Ferreteria ferreteria, Cliente? cliente)
+            :this(ferreteria)
+        {
+            this.venta.Comprador = cliente;
+            this.lstClientes.Visible = false;
+            this.listProductos.Enabled = true;
+            this.textDniClientes.Visible = false;
+            this.ActuaizarPedido();
+        }
+
+        private void BtnCargar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (this.venta.Comprador is null)
+                {
+                    MessageBox.Show("Ingrese un cliente Para realizar el pedido");
+                }
                 ferreteria.AgregarPedido(venta);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -48,24 +62,18 @@ namespace Forms
         }
 
         private void listProductos_DoubleClick(object sender, EventArgs e)
-        {
-           // int cantidadVentas = 0;
+        { 
             try
             {
-                if (this.listProductos.SelectedItems.Count != 0 && this.lstClientes.SelectedItems.Count != 0)
+                if (this.listProductos.SelectedItems.Count != 0)
                 {
-                    UnProducto nuevoStock = new UnProducto( "Ingrese la cantidad de productos a vender", this.listProductos.SelectedItem as Producto);
-                   // nuevoStock.ShowDialog();
-                    if(nuevoStock.ShowDialog() == DialogResult.OK)
+                    UnProducto unProducto = new UnProducto( "Ingrese la cantidad de productos a vender", this.listProductos.SelectedItem as Producto);
+
+                    if(unProducto.ShowDialog() == DialogResult.OK)
                     {
-
-                        //cantidadVentas = nuevoStock.NuevoStock;
-                        this.venta += new Producto(this.listProductos.SelectedItem as Producto, nuevoStock.NuevoStock);
-                    listPedidos.DataSource = this.venta.Productos;
+                        this.venta += new Producto(this.listProductos.SelectedItem as Producto, unProducto.NuevoStock);
+                        this.ActuaizarPedido();
                     }
-
-                    //labInformacionCliente.Text = venta.Comprador.Mostrar();
-                    labInformacionCliente.Text = venta.Comprador.Mostrar() + $"\n Total a pagar: ${this.venta.Total()}";
                 }
             }
             catch (Exception ex)
@@ -74,22 +82,36 @@ namespace Forms
             }
         }
 
+        /// <summary>
+        /// selecciona un cliente de la lista y lo carga a la venta como el comprador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listCleintes_DoubleClick(object sender, EventArgs e)
         {
             if (this.lstClientes.SelectedItems.Count != 0)
             {
                 venta.Comprador = this.lstClientes.SelectedItem as Cliente;
-                labInformacionCliente.Text = venta.Comprador.Mostrar() + $"\n Total a pagar: ${this.venta.Total()}";
+                labInformacionCliente.Text = venta.Comprador.Mostrar() + $"\n Total a pagar: {this.venta.Total()}";
                 this.listProductos.Enabled = true;
             }
         }
 
+        /// <summary>
+        /// al ingresar una letra en el textBox productos actualiza la lista productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textCodigoProducto_TextChanged(object sender, EventArgs e)
         {
 
-            listProductos.DataSource = ferreteria.FiltrarProductos(textCodigoProducto.Text);
+            this.listProductos.DataSource = ferreteria.FiltrarProductos(textCodigoProducto.Text);
         }
-
+        /// <summary>
+        /// al ingresar una letra en el textBox clientes actualiza la lista clientes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textDniClientes_TextChanged(object sender, EventArgs e)
         {
             lstClientes.DataSource = ferreteria.FiltrarClientes(textDniClientes.Text);
@@ -99,6 +121,43 @@ namespace Forms
         {
             lstClientes.DataSource = ferreteria.Clientes;
             listProductos.DataSource = ferreteria.Productos;
+            listPedidos.DataSource = null;
         }
+
+        /// <summary>
+        /// Activa evento doble click de la lista de pedidos y pregunta si se  
+        /// desea eliminar el articulo seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listPedidos_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.listPedidos.SelectedItems.Count != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar este articulo del pedido?","Modificar pedido"
+                                                            , MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if(dialogResult == DialogResult.Yes)
+                {
+                    this.venta -= this.listPedidos.SelectedItem as Producto;
+                    //this.listPedidos.DataSource = this.venta.Productos;
+
+                    this.ActuaizarPedido();
+
+                }
+            }
+        }
+
+        private void ActuaizarPedido()
+        {
+            this.listPedidos.Items.Clear();
+            foreach (Producto p in this.venta.Productos)
+            {
+                this.listPedidos.Items.Add(p);
+            }
+            labInformacionCliente.Text = venta.Comprador.Mostrar() + $"\n Total a pagar: ${this.venta.Total()}";
+        }
+
+
     }
 }

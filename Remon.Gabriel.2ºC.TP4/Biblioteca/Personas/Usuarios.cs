@@ -139,6 +139,11 @@ namespace Biblioteca.Personas
         {
             return !(c1==c2);
         }
+
+        public override string ToString()
+        {
+            return $"DNI: {this.dni} - Nombre: {this.nombre} {this.apellido}";
+        }
         #endregion
     }
 }

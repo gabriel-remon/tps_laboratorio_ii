@@ -1,0 +1,12 @@
+Pedidos de la ferreteria: 
+Cantidad: 2  - codigo: 202032  descripcion del productoDestornillador Philips 4x50
+Cantidad: 2  - codigo: 202033  descripcion del productoDestornillador Philips 4x60
+Cantidad: 2  - codigo: 202034  descripcion del productoDestornillador Philips 5x30
+Cantidad: 1  - codigo: 202035  descripcion del productoDestornillador Philips 5x45
+Cantidad: 200  - codigo: 153001  descripcion del productoTornillo Fix metrica: Otro
+Cantidad: 400  - codigo: 153002  descripcion del productoTornillo Fix metrica: Otro
+Cantidad: 100  - codigo: 204001  descripcion del productoTornillo Bulon metrica: Pulgada
+Cantidad: 100  - codigo: 154001  descripcion del productoTornillo Bulon metrica: Pulgada
+Cantidad: 2  - codigo: 101002  descripcion del productocaño PVC, 50 Ø  largo: 4 
+Cantidad: 2  - codigo: 101004  descripcion del productocaño PVC, 110 Ø  largo: 4 
+

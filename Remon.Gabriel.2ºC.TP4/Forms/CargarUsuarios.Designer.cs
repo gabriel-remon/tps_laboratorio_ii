@@ -37,7 +37,6 @@
             this.labContratacion = new System.Windows.Forms.Label();
             this.labContraseña = new System.Windows.Forms.Label();
             this.labNombre = new System.Windows.Forms.Label();
-            this.richTextLista = new System.Windows.Forms.RichTextBox();
             this.labLista = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textApellido = new System.Windows.Forms.TextBox();
@@ -48,13 +47,15 @@
             this.dateTimeNacimiento = new System.Windows.Forms.DateTimePicker();
             this.dateTimeContratacion = new System.Windows.Forms.DateTimePicker();
             this.cmbEnum = new System.Windows.Forms.ComboBox();
+            this.list = new System.Windows.Forms.ListBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labTitulo
             // 
             this.labTitulo.AutoSize = true;
             this.labTitulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labTitulo.Location = new System.Drawing.Point(171, 29);
+            this.labTitulo.Location = new System.Drawing.Point(146, 25);
             this.labTitulo.Name = "labTitulo";
             this.labTitulo.Size = new System.Drawing.Size(226, 25);
             this.labTitulo.TabIndex = 0;
@@ -63,7 +64,7 @@
             // labApellido
             // 
             this.labApellido.AutoSize = true;
-            this.labApellido.Location = new System.Drawing.Point(40, 126);
+            this.labApellido.Location = new System.Drawing.Point(40, 160);
             this.labApellido.Name = "labApellido";
             this.labApellido.Size = new System.Drawing.Size(51, 15);
             this.labApellido.TabIndex = 1;
@@ -72,7 +73,7 @@
             // labDni
             // 
             this.labDni.AutoSize = true;
-            this.labDni.Location = new System.Drawing.Point(40, 181);
+            this.labDni.Location = new System.Drawing.Point(40, 245);
             this.labDni.Name = "labDni";
             this.labDni.Size = new System.Drawing.Size(27, 15);
             this.labDni.TabIndex = 2;
@@ -81,7 +82,7 @@
             // labSueldo
             // 
             this.labSueldo.AutoSize = true;
-            this.labSueldo.Location = new System.Drawing.Point(340, 126);
+            this.labSueldo.Location = new System.Drawing.Point(364, 159);
             this.labSueldo.Name = "labSueldo";
             this.labSueldo.Size = new System.Drawing.Size(43, 15);
             this.labSueldo.TabIndex = 3;
@@ -90,7 +91,7 @@
             // labEnum
             // 
             this.labEnum.AutoSize = true;
-            this.labEnum.Location = new System.Drawing.Point(168, 126);
+            this.labEnum.Location = new System.Drawing.Point(211, 159);
             this.labEnum.Name = "labEnum";
             this.labEnum.Size = new System.Drawing.Size(39, 15);
             this.labEnum.TabIndex = 4;
@@ -99,7 +100,7 @@
             // labNacimiento
             // 
             this.labNacimiento.AutoSize = true;
-            this.labNacimiento.Location = new System.Drawing.Point(171, 73);
+            this.labNacimiento.Location = new System.Drawing.Point(214, 72);
             this.labNacimiento.Name = "labNacimiento";
             this.labNacimiento.Size = new System.Drawing.Size(101, 15);
             this.labNacimiento.TabIndex = 5;
@@ -108,7 +109,7 @@
             // labContratacion
             // 
             this.labContratacion.AutoSize = true;
-            this.labContratacion.Location = new System.Drawing.Point(340, 181);
+            this.labContratacion.Location = new System.Drawing.Point(364, 241);
             this.labContratacion.Name = "labContratacion";
             this.labContratacion.Size = new System.Drawing.Size(110, 15);
             this.labContratacion.TabIndex = 7;
@@ -117,7 +118,7 @@
             // labContraseña
             // 
             this.labContraseña.AutoSize = true;
-            this.labContraseña.Location = new System.Drawing.Point(171, 181);
+            this.labContraseña.Location = new System.Drawing.Point(211, 244);
             this.labContraseña.Name = "labContraseña";
             this.labContraseña.Size = new System.Drawing.Size(63, 15);
             this.labContraseña.TabIndex = 8;
@@ -132,21 +133,16 @@
             this.labNombre.TabIndex = 9;
             this.labNombre.Text = "Nombre";
             // 
-            // richTextLista
-            // 
-            this.richTextLista.Enabled = false;
-            this.richTextLista.Location = new System.Drawing.Point(469, 78);
-            this.richTextLista.Name = "richTextLista";
-            this.richTextLista.Size = new System.Drawing.Size(207, 194);
-            this.richTextLista.TabIndex = 10;
-            this.richTextLista.Text = "";
-            // 
             // labLista
             // 
+            this.labLista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labLista.AutoSize = true;
-            this.labLista.Location = new System.Drawing.Point(469, 48);
+            this.labLista.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labLista.Location = new System.Drawing.Point(575, 29);
             this.labLista.Name = "labLista";
-            this.labLista.Size = new System.Drawing.Size(108, 15);
+            this.labLista.Size = new System.Drawing.Size(156, 21);
             this.labLista.TabIndex = 11;
             this.labLista.Text = "Lista de empleados";
             // 
@@ -154,40 +150,41 @@
             // 
             this.textNombre.Location = new System.Drawing.Point(40, 91);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(100, 23);
+            this.textNombre.Size = new System.Drawing.Size(140, 23);
             this.textNombre.TabIndex = 12;
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(40, 144);
+            this.textApellido.Location = new System.Drawing.Point(40, 178);
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(100, 23);
+            this.textApellido.Size = new System.Drawing.Size(140, 23);
             this.textApellido.TabIndex = 13;
             // 
             // textDni
             // 
-            this.textDni.Location = new System.Drawing.Point(40, 199);
+            this.textDni.Location = new System.Drawing.Point(40, 263);
             this.textDni.Name = "textDni";
-            this.textDni.Size = new System.Drawing.Size(100, 23);
+            this.textDni.Size = new System.Drawing.Size(140, 23);
             this.textDni.TabIndex = 14;
             // 
             // textContraseña
             // 
-            this.textContraseña.Location = new System.Drawing.Point(171, 199);
+            this.textContraseña.Location = new System.Drawing.Point(211, 262);
             this.textContraseña.Name = "textContraseña";
             this.textContraseña.Size = new System.Drawing.Size(130, 23);
             this.textContraseña.TabIndex = 17;
             // 
             // textSueldo
             // 
-            this.textSueldo.Location = new System.Drawing.Point(340, 144);
+            this.textSueldo.Location = new System.Drawing.Point(364, 178);
             this.textSueldo.Name = "textSueldo";
-            this.textSueldo.Size = new System.Drawing.Size(111, 23);
+            this.textSueldo.Size = new System.Drawing.Size(129, 23);
             this.textSueldo.TabIndex = 19;
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(152, 251);
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCrear.Location = new System.Drawing.Point(185, 317);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(130, 35);
             this.btnCrear.TabIndex = 21;
@@ -198,7 +195,7 @@
             // dateTimeNacimiento
             // 
             this.dateTimeNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeNacimiento.Location = new System.Drawing.Point(168, 92);
+            this.dateTimeNacimiento.Location = new System.Drawing.Point(211, 91);
             this.dateTimeNacimiento.Name = "dateTimeNacimiento";
             this.dateTimeNacimiento.Size = new System.Drawing.Size(133, 23);
             this.dateTimeNacimiento.TabIndex = 22;
@@ -207,9 +204,9 @@
             // dateTimeContratacion
             // 
             this.dateTimeContratacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeContratacion.Location = new System.Drawing.Point(340, 198);
+            this.dateTimeContratacion.Location = new System.Drawing.Point(364, 259);
             this.dateTimeContratacion.Name = "dateTimeContratacion";
-            this.dateTimeContratacion.Size = new System.Drawing.Size(111, 23);
+            this.dateTimeContratacion.Size = new System.Drawing.Size(129, 23);
             this.dateTimeContratacion.TabIndex = 23;
             this.dateTimeContratacion.Value = new System.DateTime(2022, 6, 3, 15, 34, 13, 0);
             // 
@@ -217,16 +214,43 @@
             // 
             this.cmbEnum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEnum.FormattingEnabled = true;
-            this.cmbEnum.Location = new System.Drawing.Point(168, 144);
+            this.cmbEnum.Location = new System.Drawing.Point(211, 177);
             this.cmbEnum.Name = "cmbEnum";
             this.cmbEnum.Size = new System.Drawing.Size(133, 23);
             this.cmbEnum.TabIndex = 24;
+            // 
+            // list
+            // 
+            this.list.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.list.FormattingEnabled = true;
+            this.list.ItemHeight = 15;
+            this.list.Location = new System.Drawing.Point(500, 63);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(549, 289);
+            this.list.TabIndex = 25;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSalir.Location = new System.Drawing.Point(364, 317);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(130, 35);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // CargarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 312);
+            this.CancelButton = this.btnSalir;
+            this.ClientSize = new System.Drawing.Size(1061, 373);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.list);
             this.Controls.Add(this.cmbEnum);
             this.Controls.Add(this.dateTimeContratacion);
             this.Controls.Add(this.dateTimeNacimiento);
@@ -237,7 +261,6 @@
             this.Controls.Add(this.textApellido);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.labLista);
-            this.Controls.Add(this.richTextLista);
             this.Controls.Add(this.labNombre);
             this.Controls.Add(this.labContraseña);
             this.Controls.Add(this.labContratacion);
@@ -247,9 +270,10 @@
             this.Controls.Add(this.labDni);
             this.Controls.Add(this.labApellido);
             this.Controls.Add(this.labTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CargarUsuarios";
-            this.Text = "Admin";
-            this.Load += new System.EventHandler(this.CargarUsuarios_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cargar nuevo empleado";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +290,6 @@
         private System.Windows.Forms.Label labContratacion;
         private System.Windows.Forms.Label labContraseña;
         private System.Windows.Forms.Label labNombre;
-        private System.Windows.Forms.RichTextBox richTextLista;
         private System.Windows.Forms.Label labLista;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textApellido;
@@ -277,5 +300,7 @@
         private System.Windows.Forms.DateTimePicker dateTimeNacimiento;
         private System.Windows.Forms.DateTimePicker dateTimeContratacion;
         private System.Windows.Forms.ComboBox cmbEnum;
+        private System.Windows.Forms.ListBox list;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

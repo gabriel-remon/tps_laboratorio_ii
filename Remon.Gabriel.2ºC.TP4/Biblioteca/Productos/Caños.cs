@@ -25,7 +25,7 @@ namespace Biblioteca.Productos
 
         public Caños(int codigo,decimal precio,int cantidadStock, int cantidadEstandar,
                     float diametro, float largo, TipoCaño tipoCaño)
-            :base(codigo,$"caño {tipoCaño}, {diametro} Ø  largo: {largo} ",precio, cantidadStock, cantidadEstandar)
+            :base(codigo,$"caño {tipoCaño}, {diametro} Ø  largo: {largo} mts ",precio, cantidadStock, cantidadEstandar)
         {
             this.diametro = diametro;
             this.largo = largo;

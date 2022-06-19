@@ -91,6 +91,12 @@ namespace Biblioteca
 
         #region Metodos
 
+        /// <summary>
+        /// agrega un producto a la lista de productos validadndo que no 
+        /// se encuentre otro producto con su mismo id
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns></returns>
         public bool AgregarProductoStock(Producto producto)
         {
             if(this != producto)
@@ -102,11 +108,16 @@ namespace Biblioteca
             return false;
         }
 
-        public string BuscarProducto(int codigo)
+        /// <summary>
+        /// Busca un producto por su id y retorna las especificaciones del producto
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns></returns>
+        public string BuscarProducto(int idIngreso)
         {
            foreach(Producto producto in this.productosStock)
            {
-                if(producto.Id == codigo)
+                if(producto.Id == idIngreso)
                 {
                     return producto.ToString();
                 }
@@ -115,6 +126,12 @@ namespace Biblioteca
             return "No existe un producto con ese codigo";
         }
 
+        /// <summary>
+        /// Retorna una lista de productos que contenga el parametro "codigo"
+        /// dentro de su atributo ID
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns></returns>
         public List<Producto> FiltrarProductos(string codigo)
         {
             List<Producto> listFiltrada = new List<Producto>();
@@ -128,6 +145,12 @@ namespace Biblioteca
 
             return listFiltrada;
         }
+        /// <summary>
+        /// Retorna una lista de personas que contenga el parametro "codigo"
+        /// dentro de su atributo DNI
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns></returns>
         public List<Usuarios> FiltrarClientes(string codigo)
         {
             List<Usuarios> listFiltrada = new List<Usuarios>();
@@ -142,7 +165,11 @@ namespace Biblioteca
             return listFiltrada;
         }
 
-
+        /// <summary>
+        /// agrega una venta a la lista de ventas, validando lo necesario
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <exception cref="Exception"></exception>
         public void AgregarPedido(Venta venta)
         {
             if(venta is not null && venta.Productos.Count>0)
@@ -155,7 +182,11 @@ namespace Biblioteca
                 throw new Exception("Error al realizar la venta");
             }
         }
-
+        /// <summary>
+        /// Descuenta la cantidad de productos que estan en el objeto venta
+        /// del la lista de productos en stock de la ferreteria
+        /// </summary>
+        /// <param name="venta"></param>
         private void DescontarStock(Venta venta)
         {
             Producto aux;
@@ -169,7 +200,13 @@ namespace Biblioteca
                 }
             }
         }
-
+        /// <summary>
+        /// valida si el producto esta en la lista de ventas de la ferreteria
+        /// y si esta cambia su estado de venta realizada a true
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public  bool Realizarventa (Venta venta)
         {
             foreach(Venta unaVenta in this.ventas)
@@ -185,12 +222,17 @@ namespace Biblioteca
             throw new Exception("No se encontro la venta");
         }
 
-
-        public string MostrarClientes()
+        /// <summary>
+        /// Retorna un string con todas las caracteristicas de los usuarios 
+        /// enviados como parametro
+        /// </summary>
+        /// <param name="usuarios"></param>
+        /// <returns></returns>
+        public static string Mostrar(List<Usuarios> usuarios)
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (Cliente unEmpleado in this.clientes)
+            foreach (Usuarios unEmpleado in usuarios)
             {
                 sb.AppendLine(unEmpleado.Mostrar());
                 sb.AppendLine();
@@ -198,20 +240,12 @@ namespace Biblioteca
 
             return sb.ToString();
         }
-
-        public string MostrarEmpleados()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (Empleado unEmpleado in this.empleados)
-            {
-                sb.AppendLine(unEmpleado.Mostrar());
-                sb.AppendLine();
-            }
-
-            return sb.ToString();
-        }
-
+        /// <summary>
+        /// retorna un string con los productos que se deven pedir.
+        /// estos se calculan tomando en cuenta la cantidad actual y la estandar
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public string RealizarPedidoDistribuidora()
         {
             StringBuilder sb = new StringBuilder();
@@ -231,6 +265,45 @@ namespace Biblioteca
             }
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Retorna una lista de las ventas realizadas y un cliente en especifico
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns></returns>
+        public List<Venta> VentasRealizadas(Cliente cliente)
+        {
+            List<Venta> ventas = new List<Venta>();
+
+            foreach(Venta unaVenta in this.ventas)
+            {
+                if(unaVenta.VentaRealizada && unaVenta == cliente)
+                {
+                    ventas.Add(unaVenta);
+                }
+            }
+
+            return ventas;
+        }
+
+        /// <summary>
+        /// Retorna una lista de todas las ventas realizadas en la ferreteria
+        /// </summary>
+        /// <returns></returns>
+        public List<Venta> VentasRealizadas()
+        {
+            List<Venta> ventas = new List<Venta>();
+
+            foreach (Venta unaVenta in this.ventas)
+            {
+                if (unaVenta.VentaRealizada)
+                {
+                    ventas.Add(unaVenta);
+                }
+            }
+
+            return ventas;
         }
 
         #endregion

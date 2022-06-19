@@ -43,9 +43,10 @@
             // 
             // labInformacionCliente
             // 
+            this.labInformacionCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labInformacionCliente.AutoSize = true;
             this.labInformacionCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labInformacionCliente.Location = new System.Drawing.Point(402, 244);
+            this.labInformacionCliente.Location = new System.Drawing.Point(506, 350);
             this.labInformacionCliente.Name = "labInformacionCliente";
             this.labInformacionCliente.Size = new System.Drawing.Size(191, 20);
             this.labInformacionCliente.TabIndex = 0;
@@ -53,43 +54,45 @@
             // 
             // listProductos
             // 
-            this.listProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listProductos.Enabled = false;
             this.listProductos.FormattingEnabled = true;
             this.listProductos.ItemHeight = 15;
             this.listProductos.Location = new System.Drawing.Point(29, 75);
             this.listProductos.Name = "listProductos";
-            this.listProductos.Size = new System.Drawing.Size(288, 139);
+            this.listProductos.Size = new System.Drawing.Size(389, 229);
             this.listProductos.TabIndex = 1;
             this.listProductos.DoubleClick += new System.EventHandler(this.listProductos_DoubleClick);
             // 
             // lstClientes
             // 
-            this.lstClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstClientes.FormattingEnabled = true;
             this.lstClientes.ItemHeight = 15;
-            this.lstClientes.Location = new System.Drawing.Point(402, 75);
+            this.lstClientes.Location = new System.Drawing.Point(506, 75);
             this.lstClientes.Name = "lstClientes";
-            this.lstClientes.Size = new System.Drawing.Size(274, 139);
+            this.lstClientes.Size = new System.Drawing.Size(380, 229);
             this.lstClientes.TabIndex = 2;
             this.lstClientes.DoubleClick += new System.EventHandler(this.listCleintes_DoubleClick);
             // 
             // listPedidos
             // 
-            this.listPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listPedidos.FormattingEnabled = true;
             this.listPedidos.ItemHeight = 15;
-            this.listPedidos.Location = new System.Drawing.Point(29, 244);
+            this.listPedidos.Location = new System.Drawing.Point(29, 333);
             this.listPedidos.Name = "listPedidos";
-            this.listPedidos.Size = new System.Drawing.Size(288, 199);
+            this.listPedidos.Size = new System.Drawing.Size(389, 244);
             this.listPedidos.TabIndex = 3;
+            this.listPedidos.DoubleClick += new System.EventHandler(this.listPedidos_DoubleClick);
             // 
             // textDniClientes
             // 
-            this.textDniClientes.Location = new System.Drawing.Point(402, 46);
+            this.textDniClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textDniClientes.Location = new System.Drawing.Point(506, 46);
             this.textDniClientes.Name = "textDniClientes";
             this.textDniClientes.Size = new System.Drawing.Size(133, 23);
             this.textDniClientes.TabIndex = 4;
@@ -97,17 +100,19 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(402, 420);
+            this.btnCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCargar.Location = new System.Drawing.Point(506, 552);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(106, 23);
             this.btnCargar.TabIndex = 5;
             this.btnCargar.Text = "Cargar pedido";
             this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.btnCargar.Click += new System.EventHandler(this.BtnCargar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(601, 420);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Location = new System.Drawing.Point(811, 552);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -126,7 +131,7 @@
             // labpedidos
             // 
             this.labpedidos.AutoSize = true;
-            this.labpedidos.Location = new System.Drawing.Point(29, 226);
+            this.labpedidos.Location = new System.Drawing.Point(29, 315);
             this.labpedidos.Name = "labpedidos";
             this.labpedidos.Size = new System.Drawing.Size(90, 15);
             this.labpedidos.TabIndex = 8;
@@ -134,8 +139,9 @@
             // 
             // labDniCliente
             // 
+            this.labDniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labDniCliente.AutoSize = true;
-            this.labDniCliente.Location = new System.Drawing.Point(402, 28);
+            this.labDniCliente.Location = new System.Drawing.Point(506, 28);
             this.labDniCliente.Name = "labDniCliente";
             this.labDniCliente.Size = new System.Drawing.Size(84, 15);
             this.labDniCliente.TabIndex = 9;
@@ -152,9 +158,12 @@
             // 
             // CargarPedido
             // 
+            this.AcceptButton = this.btnCargar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 461);
+            this.CancelButton = this.btnSalir;
+            this.ClientSize = new System.Drawing.Size(914, 587);
+            this.ControlBox = false;
             this.Controls.Add(this.labCodigoProducto);
             this.Controls.Add(this.labDniCliente);
             this.Controls.Add(this.labpedidos);
@@ -166,7 +175,10 @@
             this.Controls.Add(this.lstClientes);
             this.Controls.Add(this.listProductos);
             this.Controls.Add(this.labInformacionCliente);
-            this.MinimumSize = new System.Drawing.Size(720, 500);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(930, 600);
             this.Name = "CargarPedido";
             this.Text = "CargarPedido";
             this.Load += new System.EventHandler(this.CargarPedido_Load);

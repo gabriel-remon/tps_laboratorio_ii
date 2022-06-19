@@ -43,7 +43,7 @@ namespace Archivos
         public void GuardarXml(T objeto)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));
-            using (StreamWriter archivo = new StreamWriter(this.path +".xml"))
+            using (StreamWriter archivo = new StreamWriter(this.path))
             {
                 serializer.Serialize(archivo, objeto);
             }
@@ -53,10 +53,10 @@ namespace Archivos
         {
             T obj = new T();
 
-            if (File.Exists(this.path + ".xml"))
+            if (File.Exists(this.path))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
-                using (StreamReader archivo = new StreamReader(this.path + ".xml"))
+                using (StreamReader archivo = new StreamReader(this.path ))
                 {
                     obj = (T) serializer.Deserialize(archivo) ;
                 }

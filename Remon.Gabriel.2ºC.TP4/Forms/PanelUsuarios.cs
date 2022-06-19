@@ -16,19 +16,14 @@ using Biblioteca.DTO;
 
 namespace Forms
 {
-    public enum TipoUsuario
-    {
-        Admin,
-        Cliente,
-        Empleado,
-        ninguno
-    }
+    
+
     public partial class PanelUsuarios : Form
     {
 
         Usuarios usuarioLogiado;
         Ferreteria ferreteria;
-        string pathGuardado;
+        //string pathGuardado;
 
         public PanelUsuarios(Ferreteria ferreteria)
             : this(ferreteria, null)
@@ -53,24 +48,23 @@ namespace Forms
             }
         }
 
-        private void ModoAdmin()
-        {
-            //this.btnNuevoCliente.Text = "Cargar nuevo Empleado";
-        }
-
         private void ModoEmpleado()
         {
-            this.btnNuevoCliente.Visible = false;
-            this.btnPedidoDistribuidora.Visible = false;
+            //this.btnNuevoCliente.Visible = false;
             this.btnNuevoEmpleado.Visible = false;
+            this.btnListEmpleados.Visible = false;
+            this.btnListEmpleados.Visible = false;
+            this.btnNuevoProducto.Visible = false;
+            this.btnActualizar.Visible = false;
         }
         private void ModoCliente()
         {
             this.btnNuevoCliente.Visible = false;
             this.btnNuevoProducto.Visible = false;
             this.btnActualizar.Visible = false;
-            this.btnPedidoDistribuidora.Visible = false;
-
+            this.btnNuevoEmpleado.Visible = false;
+            this.btnNuevoCliente.Visible = false;
+            this.btnListEmpleados.Visible = false;
         }
 
 
@@ -81,7 +75,7 @@ namespace Forms
                 while(true)
                 {
                     ActualizarPedidos(this.ferreteria);
-                    Thread.Sleep(5000);
+                    Thread.Sleep(1000);
                 }
             });
         }
@@ -95,36 +89,90 @@ namespace Forms
             }
             else
             {
-                this.listPedidos.DataSource = Venta.VentasPendiente(ferreteria.Ventas);
+                if(this.usuarioLogiado is Cliente)
+                {
+                    this.listPedidos.DataSource = Venta.VentasPendiente(ferreteria.Ventas,usuarioLogiado);
+                }
+                else
+                {
+                    this.listPedidos.DataSource = Venta.VentasPendiente(ferreteria.Ventas);
+                }
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGenerarPedido_Click(object sender, EventArgs e)
         {
-            CargarPedido cargarPedido = new CargarPedido(ferreteria);
-            cargarPedido.ShowDialog();
-            this.listPedidos.DataSource = Venta.VentasPendiente(ferreteria.Ventas);
+            CargarPedido cargarPedido;
+            try
+            {
+                //Crear una execcion personalizada para este proceso asi se llama
+                //al boton crear cliente o crear empleado
+                if(this.ferreteria.Clientes.Count ==0 && this.ferreteria.Empleados.Count == 0)
+                {
+                    throw new Exception("Primero deve cargar al menos un cliente y un prodcuto");
+                }
+                if(this.usuarioLogiado is Cliente)
+                {
+                    cargarPedido = new CargarPedido(ferreteria,usuarioLogiado as Cliente);
+                }
+                else
+                {
+                    cargarPedido = new CargarPedido(ferreteria);
+                }
+                cargarPedido.ShowDialog();
+                this.ActualizarPedidos(this.ferreteria);
+                //this.listPedidos.DataSource = Venta.VentasPendiente(ferreteria.Ventas);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
+        /// <summary>
+        /// Permite cargar un nuevo cliente
+        /// En futuras versiones se registrar que empleado cargo a cada cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
-            CargarUsuarios carga = new CargarUsuarios(ferreteria, TipoUsuario.Empleado);
+            CargarUsuarios carga = new CargarUsuarios(ferreteria, new Empleado());
             carga.ShowDialog();
         }
 
+        /// <summary>
+        /// Permite cargar un nuevo empleado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoEmpleado_Click(object sender, EventArgs e)
         {
-
-            CargarUsuarios carga = new CargarUsuarios(ferreteria, TipoUsuario.Admin);
+            CargarUsuarios carga = new CargarUsuarios(ferreteria);
             carga.ShowDialog();
-
         }
+
+        /// <summary>
+        /// Permitira agregar un producto nuevo a la lista 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
             CargarNuevoProducto cargaProducto = new CargarNuevoProducto(ferreteria);
             cargaProducto.ShowDialog();
         }
 
+        /// <summary>
+        /// Permite cambiar el precio y el stock a los productos en stock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (ferreteria.Productos.Count == 0)
@@ -137,83 +185,143 @@ namespace Forms
             {
                 ListaProductos lista = new ListaProductos(this.ferreteria);
                 lista.ShowDialog();
-                //if(lista.DialogResult == DialogResult.OK)
-                    //GuardarListaProductos
             }
         }
 
-        private void labListaPedidos_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void PanelUsuarios_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult salir = MessageBox.Show("Desea salir?", "Salir",
-                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (salir == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
-
+        /// <summary>
+        /// Evento doble click de la lista de pedidos. Al activar el evento
+        /// se infoma la descripcion del pedido selecciolnado y se pregunta 
+        /// si se vendio. si se vendio se cambia el estado del pedido a vendido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listPedidos_DoubleClick(object sender, EventArgs e)
         {
-            Venta venta;
+            Venta? venta;
             if(listPedidos.SelectedItems.Count != 0)
             {
                 venta = listPedidos.SelectedItem as Venta;
-                DialogResult dialog = MessageBox.Show( venta.Mostrar() , "Realizar venta", MessageBoxButtons.YesNo);
-
-                if(dialog == DialogResult.Yes)
+                if (usuarioLogiado is Cliente)
+                {
+                    MessageBox.Show(venta.Mostrar(), "Realizar venta");
+                }
+                else if (MessageBox.Show(venta.Mostrar(), "Realizar venta", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     ferreteria.Realizarventa(venta);
                 }
-
             }
         }
 
-        private void btnPedidoDistribuidora_Click(object sender, EventArgs e)
+        
+
+        /// <summary>
+        /// Guarda el objeto ferreteria en un archivo xml con una ruta ya definida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        Archivos.Save<FerreteriaDto> guardar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
+        //        guardar.GuardarXml(FerreteriaDao.CrearFerreteriaDto(this.ferreteria));
+        //        MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
+        /// <summary>
+        /// Carga el objeto ferreteria en un archivo xml con una ruta ya definida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
+        //        this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
+        //        MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
+        private void btnHistorial_Click(object sender, EventArgs e)
         {
-            try
+            HistorialPedidos historialPedidos;
+
+            if (this.usuarioLogiado is Cliente)
             {
-                Archivos.Save<Ferreteria> guardar = new Archivos.Save<Ferreteria>(Environment.CurrentDirectory);
-                guardar.GuardarTxtFechaActual(this.ferreteria.RealizarPedidoDistribuidora());
-                MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
+                historialPedidos = new HistorialPedidos(this.ferreteria.VentasRealizadas(this.usuarioLogiado as Cliente));
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                historialPedidos = new HistorialPedidos(this.ferreteria.VentasRealizadas());
+            }
+
+            historialPedidos.ShowDialog();
+        }
+
+      
+
+        private void PanelUsuarios_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void PanelUsuarios_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1) { this.btnGenerarPedido_Click(sender, e); }
+            
+            if (e.KeyCode == Keys.F2) { this.btnHistorial_Click(sender, e); }
+            
+            if (e.KeyCode == Keys.F3) { this.btnNuevoCliente_Click(sender, e); }
+            
+            //if (e.KeyCode == Keys.F4) { this.btnPedidoDistribuidora_Click(sender, e); }
+            
+            if (e.KeyCode == Keys.F4) { this.btnNuevoEmpleado_Click(sender, e); }
+            
+            if (e.KeyCode == Keys.F5) { this.btnNuevoProducto_Click(sender, e); }
+            
+            if (e.KeyCode == Keys.F6) { this.btnActualizar_Click(sender, e); }
+
+            if (e.KeyCode == Keys.F7) { this.btnListClientes_Click(sender, e); }
+
+            if (e.KeyCode == Keys.F8) { this.btnListEmpleados_Click(sender, e); }
+
+           // if (e.KeyCode == Keys.Escape) { this.Close(); }
+           
+        }
+
+        private void btnListClientes_Click(object sender, EventArgs e)
+        {
+            if (this.ferreteria.Clientes.Count > 0)
+            {
+                Informacion informacion = new Informacion(Ferreteria.Mostrar(this.ferreteria.Clientes));
+                informacion.ShowDialog();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnListEmpleados_Click(object sender, EventArgs e)
         {
-            try
+            if (this.ferreteria.Empleados.Count > 0)
             {
-                Archivos.Save<FerreteriaDto> guardar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
-                guardar.GuardarXml(FerreteriaDao.CrearFerreteriaDto(this.ferreteria));
-                MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                Informacion informacion = new Informacion(Ferreteria.Mostrar(this.ferreteria.Empleados));
+                informacion.ShowDialog();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        internal void CargarFerreteria(Ferreteria ferreteria)
         {
-            try
-            {
-                Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
-                this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
-                MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.ferreteria = ferreteria;
         }
+        
     }
 }

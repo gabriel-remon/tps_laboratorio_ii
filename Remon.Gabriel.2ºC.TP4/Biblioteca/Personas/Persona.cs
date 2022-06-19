@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Biblioteca.Interfaces;
 
 namespace Biblioteca.Personas
 {
-    public abstract class Persona
+    public abstract class Persona : Ipersona
     {
         protected string nombre;
         protected string apellido;

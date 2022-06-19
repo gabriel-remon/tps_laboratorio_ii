@@ -86,7 +86,7 @@ namespace Biblioteca.Personas
 
         public override string ToString()
         {
-            return $"{this.nombre} {this.apellido}";
+            return $"{base.ToString()} -- Sueldo: {this.sueldo}  cargo: {this.cargo}";
         }
 
         

@@ -145,12 +145,12 @@ namespace Biblioteca.Productos
         public override string ToString()
         {
             //return $"{codigo.ToString()}  {descripcion}  c/u";
-            return $"codigo: {codigo.ToString()}    {descripcion}    {precio.ToString("C")} c/u";
+            return $"codigo: {codigo.ToString()}    {descripcion}    {precio.ToString("C")} c/u - stock: {this.cantidadStock} ";
         }
 
         public virtual string MostrarVenta()
         {
-            return $"codigo:{codigo},  {descripcion}   {precio}$c/u --- sub total: {cantidadVendidos * precio}$ ";
+            return $"codigo:{codigo},  {descripcion}   {precio}$c/u --- cantidad Vendidos: {this.CantidadVendidos}  sub total: {cantidadVendidos * precio}$ ";
         }
 
         public ProductoDto CrearDto()

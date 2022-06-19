@@ -43,7 +43,9 @@ namespace Forms
                                                  cantidadStock: int.Parse(textStockActual.Text),
                                                  cantidadEstandar: int.Parse(textStockStandar.Text),
                                                  paso: (Tornillos.Paso)cmbMetrica.SelectedItem,
-                                                 tipoTornillo: (Tornillos.TipoTornillo)combTipoTornillo.SelectedItem);
+                                                 tipoTornillo: (Tornillos.TipoTornillo)combTipoTornillo.SelectedItem,
+                                                 largo: float.Parse(textLargoTornillo.Text)
+                                                 );
                 }
                 if (radButnCaño.Checked)
                 {
@@ -89,26 +91,28 @@ namespace Forms
 
         private void radButnCaño_CheckedChanged(object sender, EventArgs e)
         {
-            textDescripcion.Enabled = false;
+            //textDescripcion.Enabled = false;
 
             EnableCaño(true);
             EnableTornillo(false);
+            textDescripcion.Enabled = false;
         }
 
         private void radButnTornillo_CheckedChanged(object sender, EventArgs e)
         {
-            textDescripcion.Enabled = false;
+            //textDescripcion.Enabled = false;
 
             EnableCaño(false);
             EnableTornillo(true);
+            textDescripcion.Enabled = false;
         }
 
         private void radButnOtro_CheckedChanged(object sender, EventArgs e)
         {
-            textDescripcion.Enabled = true;
 
             EnableCaño(false);
             EnableTornillo(false);
+            textDescripcion.Enabled = true;
         }
 
         private void EnableTornillo(bool estado)
@@ -116,12 +120,14 @@ namespace Forms
             combTipoTornillo.Enabled = estado;
             textLargoTornillo.Enabled = estado;
             cmbMetrica.Enabled = estado;
+            //textDescripcion.Enabled = !estado;
         }
         private void EnableCaño(bool estado)
         {
             combTipoCaño.Enabled = estado;
-            textDescripcion.Enabled = estado;
             textLargoCaño.Enabled = estado;
+            this.textDiametro.Enabled = estado;
+            //textDescripcion.Enabled = !estado;
         }
 
         private void CargarNuevoProducto_Load(object sender, EventArgs e)

@@ -55,7 +55,7 @@
             this.listProdcutos.ItemHeight = 23;
             this.listProdcutos.Location = new System.Drawing.Point(188, 42);
             this.listProdcutos.Name = "listProdcutos";
-            this.listProdcutos.Size = new System.Drawing.Size(535, 234);
+            this.listProdcutos.Size = new System.Drawing.Size(1019, 395);
             this.listProdcutos.TabIndex = 1;
             this.listProdcutos.DoubleClick += new System.EventHandler(this.listProdcutos_DoubleClick);
             // 
@@ -63,7 +63,7 @@
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(12, 265);
+            this.btnSalir.Location = new System.Drawing.Point(12, 433);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 28);
             this.btnSalir.TabIndex = 2;
@@ -105,15 +105,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(744, 311);
+            this.CancelButton = this.btnSalir;
+            this.ClientSize = new System.Drawing.Size(1228, 494);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labListaProductos);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.listProdcutos);
             this.Controls.Add(this.labCodigo);
-            this.MinimumSize = new System.Drawing.Size(760, 350);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1150, 500);
             this.Name = "ListaProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaProductos";
             this.Load += new System.EventHandler(this.ListaProductos_Load);
             this.ResumeLayout(false);

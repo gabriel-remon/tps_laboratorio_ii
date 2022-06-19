@@ -52,5 +52,10 @@ namespace Biblioteca.Personas
             return clientedto;
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
     }
 }

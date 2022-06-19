@@ -320,9 +320,12 @@
             // 
             // CargarNuevoProducto
             // 
+            this.AcceptButton = this.btnAñador;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(596, 333);
+            this.ControlBox = false;
             this.Controls.Add(this.cmbMetrica);
             this.Controls.Add(this.combTipoTornillo);
             this.Controls.Add(this.combTipoCaño);
@@ -351,6 +354,9 @@
             this.Controls.Add(this.radButnOtro);
             this.Controls.Add(this.textDiametro);
             this.Controls.Add(this.labCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CargarNuevoProducto";
             this.Text = "CargarNuevoProducto";
             this.Load += new System.EventHandler(this.CargarNuevoProducto_Load);

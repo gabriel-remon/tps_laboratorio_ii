@@ -60,13 +60,32 @@ namespace Biblioteca
             }
         }
 
+        public bool VentaRealizada
+        {
+            get
+            {
+                return this.ventaRealizada;
+            }
+        }
+
         #endregion
 
+        #region Metodos
+        /// <summary>
+        /// cambia el estado de ventaRealizada a true
+        /// </summary>
+        /// <param name="venta"></param>
         public static void RealizarVenta(Venta venta)
         {
             venta.ventaRealizada=true;
         }
 
+        /// <summary>
+        /// Recive una lista de ventas y retorna una lista de ventas solo con las ventas
+        /// pendientes
+        /// </summary>
+        /// <param name="ventas"></param>
+        /// <returns></returns>
         public static List<Venta> VentasPendiente(List<Venta> ventas)
         {
             List<Venta> listaFiltrada = new List<Venta>();
@@ -79,12 +98,34 @@ namespace Biblioteca
 
             return listaFiltrada;
         }
+        /// <summary>
+        /// Recive una lista de ventas y retorna una lista de ventas solo con las ventas
+        /// pendientes y que correspondan al cliente recibido
+        /// </summary>
+        /// <param name="ventas"></param>
+        /// <returns></returns>
+        public static List<Venta> VentasPendiente(List<Venta> ventas, Usuarios cliente)
+        {
+            List<Venta> listaFiltrada = new List<Venta>();
 
+            foreach (Venta unaVenta in ventas)
+            {
+                if (unaVenta.ventaRealizada == false && unaVenta.comprador == cliente)
+                    listaFiltrada.Add(unaVenta);
+            }
 
+            return listaFiltrada;
+        }
+
+        /// <summary>
+        /// Muestra los detalles de una venta
+        /// </summary>
+        /// <returns></returns>
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
+            sb.AppendLine($"Cliente: {this.comprador.ToString()}");
             sb.AppendLine($"Fecha de la compra: {fechaCompra.ToString("d")}");
             foreach (Producto unProducto in this.productos)
             {
@@ -104,7 +145,7 @@ namespace Biblioteca
                 total  +=unProducto.SubTotal;
             }
 
-            return total.ToString();
+            return total.ToString("C");
         }
 
         public VentaDto CrearDto()
@@ -137,7 +178,9 @@ namespace Biblioteca
             return null;
         }
 
-        #region SobrecargaOperadores
+        #endregion
+
+        #region Sobrecargas
         public static bool operator == (Venta venta , Usuarios persona)
         {
             return venta.comprador == persona;
@@ -150,7 +193,7 @@ namespace Biblioteca
 
         public static Venta operator +(Venta v, Producto p)
         {
-            if(p is not null)
+            if(p.CantidadVendidos > 0)
             {
                 if(v==p)
                 {
@@ -159,6 +202,18 @@ namespace Biblioteca
                 v.productos.Add(p);
             }
             
+            return v;
+        }
+        public static Venta operator -(Venta v, Producto p)
+        {
+            if (p is not null)
+            {
+                if (v == p)
+                {
+                    v.productos.Remove(p);
+                }
+            }
+
             return v;
         }
         public static bool operator ==(Venta v, Producto p)

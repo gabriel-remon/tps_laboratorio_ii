@@ -61,7 +61,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(12, 177);
+            this.btnAceptar.Location = new System.Drawing.Point(12, 187);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -122,11 +122,12 @@
             this.numericStock.Size = new System.Drawing.Size(103, 23);
             this.numericStock.TabIndex = 8;
             // 
-            // NuevoStock
+            // UnProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 222);
+            this.ControlBox = false;
             this.Controls.Add(this.numericStock);
             this.Controls.Add(this.numericPrecio);
             this.Controls.Add(this.lblNuevoPrecio);
@@ -135,7 +136,11 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.labStockNuevo);
             this.Controls.Add(this.labStockActual);
-            this.Name = "NuevoStock";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "UnProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoStock";
             this.Load += new System.EventHandler(this.NuevoStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecio)).EndInit();

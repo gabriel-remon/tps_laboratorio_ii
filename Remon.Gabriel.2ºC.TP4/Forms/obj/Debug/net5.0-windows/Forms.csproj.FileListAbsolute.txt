@@ -29,3 +29,5 @@ D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\obj\Debug\net5.0
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\bin\Debug\net5.0-windows\Archivos.dll
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\bin\Debug\net5.0-windows\Archivos.pdb
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\obj\Debug\net5.0-windows\Forms.Properties.Resources.resources
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\obj\Debug\net5.0-windows\Forms.Inicio.resources
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Forms\obj\Debug\net5.0-windows\Forms.Informacion.resources

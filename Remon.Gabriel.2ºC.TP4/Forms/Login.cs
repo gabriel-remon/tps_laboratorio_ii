@@ -6,9 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Biblioteca;
 using Biblioteca.Personas;
+using Biblioteca.DAO;
+using Biblioteca.DTO;
+using System.IO;
+
 
 namespace Forms
 {
@@ -17,36 +22,44 @@ namespace Forms
         private Ferreteria ferreteria;
         private string usuarioAdmin;
         private string contraseñaAdmin;
-
+        private string pathFerreteria = Path.Combine(Environment.CurrentDirectory, "Ferreteria.xml");
 
 
         public Login()
         {
             InitializeComponent();
             this.ferreteria = new Ferreteria();
-        }
 
+        }
+        /// <summary>
+        /// Se iniciara aplicacion con distintos niveles de acceso, dependiendo el tipo 
+        /// de usuario que quiera ingresar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnLoging_Click(object sender, EventArgs e)
         {
-            //PanelUsuarios panelUsuarios;
-
+            Inicio? inicio = null;
             try
             {
-                PanelUsuarios panelUsuarios = null;
 
                 if (!RdUsuarios.Checked && !RdEmpleados.Checked)
                 {
                     if (TxbContraseña.Text == this.contraseñaAdmin && TxbUsuario.Text == this.usuarioAdmin)
-                        panelUsuarios = new PanelUsuarios(this.ferreteria);
+                        inicio = new Inicio(this.ferreteria,pathFerreteria);
                 }
                 else
                 {
-                 panelUsuarios = new PanelUsuarios(this.ferreteria, loging(clientesCheck: RdUsuarios.Checked,
-                                                                                        empleadosCheck: RdEmpleados.Checked,
-                                                                                        contraseña: TxbContraseña.Text,
-                                                                                        usuario: TxbUsuario.Text));
+                        inicio = new Inicio(this.ferreteria, loging(clientesCheck: RdUsuarios.Checked,
+                                                                    empleadosCheck: RdEmpleados.Checked,
+                                                                    contraseña: TxbContraseña.Text,
+                                                                    usuario: TxbUsuario.Text),              pathFerreteria);
                 }
-                panelUsuarios.ShowDialog();
+                if(inicio == null)
+                {
+                    throw new Exception("Usuario no encontrado");
+                }
+                inicio.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -55,30 +68,78 @@ namespace Forms
 
         }
 
+        /// <summary>
+        /// Compueba que la contraseña y el usuario existen y retorna el usuario
+        /// que es duaño de esa cuenta, en caso contrario null
+        /// </summary>
+        /// <param name="clientesCheck"></param>
+        /// <param name="empleadosCheck"></param>
+        /// <param name="contraseña"></param>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         private Usuarios loging(bool clientesCheck, bool empleadosCheck, string contraseña, string usuario)
         {
             Usuarios retorno = null;
 
-
             if (clientesCheck)
             {
-                //if (Usuarios.Logear(contraseña, usuario, ferreteria.Clientes))
                     retorno = Usuarios.Logear(contraseña, usuario, ferreteria.Clientes);
             }
             else
             {
-               // if (Usuarios.Logear(contraseña, usuario, ferreteria.Empleados))
                     retorno = Usuarios.Logear(contraseña, usuario, ferreteria.Empleados);
             }
             
-
             return retorno;
         }
 
+        /// <summary>
+        /// Se setea la contraseña de administrador y se carga la instancia de ferreteria si es que exsite 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Login_Load(object sender, EventArgs e)
         {
             contraseñaAdmin = "admin";
             usuarioAdmin = "admin";
+
+            Task.Run(() =>
+            {
+                while(true)
+                {
+
+                    ComprobarActualizacion();
+                    Thread.Sleep(15000);
+                }
+            });
         }
+
+        private void ComprobarActualizacion()
+        {
+            if(this.InvokeRequired)
+            {
+                Action delegado = ComprobarActualizacion;
+                this.Invoke(delegado);
+            }
+            else
+            {
+                this.CargarFerreteria();
+            }
+        }
+
+        private void CargarFerreteria()
+        {
+            try
+            {
+                Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(pathFerreteria);
+                this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+
     }
 }
