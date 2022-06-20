@@ -9,8 +9,7 @@ using Biblioteca.DTO;
 
 namespace Biblioteca.Productos
 {
-    [XmlInclude(typeof(Tornillos))]
-    [XmlInclude(typeof(Caños))]
+
     public class Producto
     {
         protected decimal precio;

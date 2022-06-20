@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSalir;
-            this.ClientSize = new System.Drawing.Size(914, 587);
+            this.ClientSize = new System.Drawing.Size(928, 598);
             this.ControlBox = false;
             this.Controls.Add(this.labCodigoProducto);
             this.Controls.Add(this.labDniCliente);
@@ -180,6 +180,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(930, 600);
             this.Name = "CargarPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CargarPedido";
             this.Load += new System.EventHandler(this.CargarPedido_Load);
             this.ResumeLayout(false);

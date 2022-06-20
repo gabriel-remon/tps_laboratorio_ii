@@ -345,7 +345,7 @@
         <Nombre>Pepe</Nombre>
         <EstadoFiscal>Monotributista</EstadoFiscal>
       </Comprador>
-      <VentaRealizada>false</VentaRealizada>
+      <VentaRealizada>true</VentaRealizada>
       <FechaCompra>2022-06-19T14:06:06.3246245-03:00</FechaCompra>
     </VentaDto>
   </Ventas>

@@ -13,7 +13,7 @@ using Biblioteca.Productos;
 using System.IO;
 using Biblioteca.DAO;
 using Biblioteca.DTO;
-
+using Biblioteca.IO;
 
 namespace Forms
 {
@@ -46,9 +46,16 @@ namespace Forms
         {
             this.usuario = usuario;
             panelUsuarios = new PanelUsuarios(ferreteria,usuario);
+            this.serverToolStripMenuItem.Visible = false;
 
             if (usuario is Cliente)
-                this.archivosToolStripMenuItem.Visible = false;
+            {
+                this.guardarToolStripMenuItem.Visible = false;
+                this.guardarComoToolStripMenuItem.Visible = false;
+                this.cargarToolStripMenuItem.Visible = false;
+
+            }
+            
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -93,7 +100,7 @@ namespace Forms
         {
             try
             {
-                Archivos.Save<Ferreteria> guardar = new Archivos.Save<Ferreteria>(pathDistribuidora);
+                Archivos.IOArchivos<Ferreteria> guardar = new Archivos.IOArchivos<Ferreteria>(pathDistribuidora);
                 guardar.GuardarTxtFechaActual(this.ferreteria.RealizarPedidoDistribuidora());
                 MessageBox.Show($"Se creo el pedido para la distribuidora \n" +
                                 $"Ubicacion: {pathDistribuidora}");
@@ -145,12 +152,15 @@ namespace Forms
         {
             try
             {
-                Archivos.Save<FerreteriaDto> guardar = new Archivos.Save<FerreteriaDto>(path);
+                Archivos.IOArchivos<FerreteriaDto> guardar = new Archivos.IOArchivos<FerreteriaDto>(path);
                 guardar.GuardarXml(FerreteriaDao.CrearFerreteriaDto(this.ferreteria));
+                Server.Clear();
+                Server.Guardar(this.ferreteria);
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -164,7 +174,7 @@ namespace Forms
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = "Archivo .xml |*.xml";
                 openFileDialog.ShowDialog();
-                Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(openFileDialog.FileName);
+                Archivos.IOArchivos<FerreteriaDto> cargar = new Archivos.IOArchivos<FerreteriaDto>(openFileDialog.FileName);
                 this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
                 //MessageBox.Show($"Archivo cargado con exito \n path: {pathFerreteria}");
                 if (ActualizarFerreteriaEvent is not null)
@@ -176,6 +186,30 @@ namespace Forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void enviarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Biblioteca.IO.Server.Guardar(ferreteria.Productos);
+        }
+
+        private void listaDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InformacionSql informacionSql = new InformacionSql(Server.LeerVenta());
+            informacionSql.ShowDialog();
+        }
+
+        private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InformacionSql informacionSql = new InformacionSql(Server.LeerClientes());
+            informacionSql.ShowDialog();
+        }
+
+        private void listaProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InformacionSql informacionSql = new InformacionSql(Server.LeerEmpleados());
+            informacionSql.ShowDialog();
+
         }
     }
 }

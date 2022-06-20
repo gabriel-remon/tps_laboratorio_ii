@@ -102,7 +102,6 @@ namespace Forms
         {
             contraseñaAdmin = "admin";
             usuarioAdmin = "admin";
-
             Task.Run(() =>
             {
                 while(true)
@@ -130,7 +129,7 @@ namespace Forms
         {
             try
             {
-                Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(pathFerreteria);
+                Archivos.IOArchivos<FerreteriaDto> cargar = new Archivos.IOArchivos<FerreteriaDto>(pathFerreteria);
                 this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
             }
             catch (Exception ex)

@@ -25,3 +25,9 @@ D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\obj\Debug\net5.0-windows\ref\Remon.Gabriel.2ºC.TP4.dll
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\Archivos.dll
 D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\Archivos.pdb
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\programacion\tps_laboratorio_ii\Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

@@ -135,7 +135,10 @@ namespace Biblioteca
 
             return sb.ToString();            
         }
-
+        /// <summary>
+        /// retorna un string con la suma de todos los sub totales de cada prodcuto
+        /// </summary>
+        /// <returns></returns>
         public string Total()
         {
             decimal total = 0;
@@ -148,6 +151,11 @@ namespace Biblioteca
             return total.ToString("C");
         }
 
+        /// <summary>
+        /// Transforma este objeto en uno de data transfer object 
+        /// el cual tiene todas las propiedades get y set publicas
+        /// </summary>
+        /// <returns></returns>
         public VentaDto CrearDto()
         {
             VentaDto ventaDto = new VentaDto();
@@ -166,6 +174,12 @@ namespace Biblioteca
             return ventaDto;
         }
 
+        /// <summary>
+        /// Busca un producto en su lista de productos y los
+        /// retorna si es que lo encuentra
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns></returns>
         public Producto BuscarProducto(Producto producto)
         {
             foreach(Producto item in this.productos)

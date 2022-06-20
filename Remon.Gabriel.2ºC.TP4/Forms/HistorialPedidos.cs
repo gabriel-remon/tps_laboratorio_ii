@@ -34,7 +34,7 @@ namespace Forms
                 {
                     ventasTxt.AppendLine(venta.Mostrar());
                 }
-                Save<Venta> save = new Save<Venta>(saveFileDialog.FileName);
+                IOArchivos<Venta> save = new IOArchivos<Venta>(saveFileDialog.FileName);
                 save.GuardarTxtFechaActual(ventasTxt.ToString());
             }
             catch (Exception ex)

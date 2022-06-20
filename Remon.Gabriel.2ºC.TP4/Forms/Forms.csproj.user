@@ -16,6 +16,9 @@
     <Compile Update="Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InformacionSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>

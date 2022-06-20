@@ -56,6 +56,7 @@ namespace Forms
             this.btnListEmpleados.Visible = false;
             this.btnNuevoProducto.Visible = false;
             this.btnActualizar.Visible = false;
+            this.btnListEmpleados.Visible = false;
         }
         private void ModoCliente()
         {
@@ -65,6 +66,7 @@ namespace Forms
             this.btnNuevoEmpleado.Visible = false;
             this.btnNuevoCliente.Visible = false;
             this.btnListEmpleados.Visible = false;
+            this.btnListClientes.Visible = false;
         }
 
 

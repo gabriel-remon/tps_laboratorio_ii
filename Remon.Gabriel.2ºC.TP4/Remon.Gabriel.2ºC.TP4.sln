@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remon.Gabriel.2ºC.TP4", "Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4.csproj", "{43ECDBA2-6971-415D-A42A-BE3E323B13D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remon.Gabriel.2ºC.TP4", "Remon.Gabriel.2ºC.TP4\Remon.Gabriel.2ºC.TP4.csproj", "{43ECDBA2-6971-415D-A42A-BE3E323B13D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{DA245858-BD32-4A8F-91CA-B69C1C82E12E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archivos", "Archivos\Archivos.csproj", "{075FB60C-7A49-4F40-BD61-D7381931C1FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "Forms\Forms.csproj", "{C1A292D6-BAA6-4516-A60E-E3DBE213B7D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Forms\Forms.csproj", "{C1A292D6-BAA6-4516-A60E-E3DBE213B7D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFerreteria", "TestFerreteria\TestFerreteria.csproj", "{AE6F3611-E329-425C-A70D-EAB0927EF2C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C1A292D6-BAA6-4516-A60E-E3DBE213B7D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1A292D6-BAA6-4516-A60E-E3DBE213B7D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1A292D6-BAA6-4516-A60E-E3DBE213B7D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6F3611-E329-425C-A70D-EAB0927EF2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6F3611-E329-425C-A70D-EAB0927EF2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6F3611-E329-425C-A70D-EAB0927EF2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6F3611-E329-425C-A70D-EAB0927EF2C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
