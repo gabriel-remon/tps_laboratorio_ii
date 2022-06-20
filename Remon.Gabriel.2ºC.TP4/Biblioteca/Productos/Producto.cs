@@ -31,7 +31,6 @@ namespace Biblioteca.Productos
             this.codigo = codigo;
             this.descripcion = descripcion;
             this.cantidadStock = cantidadStock;
-            //this.cantidadVendidos = 0;
             this.cantidadEstandar = cantidadEstandar;
         }
 
@@ -143,7 +142,6 @@ namespace Biblioteca.Productos
        
         public override string ToString()
         {
-            //return $"{codigo.ToString()}  {descripcion}  c/u";
             return $"codigo: {codigo.ToString()}    {descripcion}    {precio.ToString("C")} c/u - stock: {this.cantidadStock} ";
         }
 

@@ -132,9 +132,9 @@ namespace Forms
                 Archivos.IOArchivos<FerreteriaDto> cargar = new Archivos.IOArchivos<FerreteriaDto>(pathFerreteria);
                 this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                //MessageBox.Show(ex.Message);
+                
             }
         }
 

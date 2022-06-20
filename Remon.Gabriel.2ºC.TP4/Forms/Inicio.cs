@@ -26,6 +26,9 @@ namespace Forms
         string pathDistribuidora;
         string pathFerreteria;
 
+        public delegate void ActualizarFerreteria(Ferreteria ferreteria);
+        public event ActualizarFerreteria ActualizarFerreteriaEvent;
+
         private Inicio()
         {
             InitializeComponent();
@@ -164,8 +167,6 @@ namespace Forms
             }
         }
 
-        public delegate void ActualizarFerreteria(Ferreteria ferreteria);
-        public event ActualizarFerreteria ActualizarFerreteriaEvent;
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -188,28 +189,47 @@ namespace Forms
             }
         }
 
-        private void enviarProductosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Biblioteca.IO.Server.Guardar(ferreteria.Productos);
-        }
+      
 
         private void listaDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InformacionSql informacionSql = new InformacionSql(Server.LeerVenta());
-            informacionSql.ShowDialog();
+            try
+            {
+                InformacionSql informacionSql = new InformacionSql(Server.LeerVenta());
+                informacionSql.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InformacionSql informacionSql = new InformacionSql(Server.LeerClientes());
-            informacionSql.ShowDialog();
+            try
+            {
+                InformacionSql informacionSql = new InformacionSql(Server.LeerClientes());
+                informacionSql.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void listaProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InformacionSql informacionSql = new InformacionSql(Server.LeerEmpleados());
-            informacionSql.ShowDialog();
-
+            try
+            {
+                InformacionSql informacionSql = new InformacionSql(Server.LeerEmpleados());
+                informacionSql.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+   
     }
 }

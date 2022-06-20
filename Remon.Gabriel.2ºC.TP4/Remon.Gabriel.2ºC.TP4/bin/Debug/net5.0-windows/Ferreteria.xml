@@ -64,6 +64,15 @@
       <Nombre>pepe</Nombre>
       <EstadoFiscal>Monotributista</EstadoFiscal>
     </Clientedto>
+    <Clientedto>
+      <Usuario>10100100</Usuario>
+      <Contraseña>1234</Contraseña>
+      <Dni>10100100</Dni>
+      <FechaNacimiento>1999-11-25T15:34:13</FechaNacimiento>
+      <Apellido>rodriguez</Apellido>
+      <Nombre>pepe</Nombre>
+      <EstadoFiscal>Otros</EstadoFiscal>
+    </Clientedto>
   </Clientes>
   <Empleados>
     <EmpleadoDto>

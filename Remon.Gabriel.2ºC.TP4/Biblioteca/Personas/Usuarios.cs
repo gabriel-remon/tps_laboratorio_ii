@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Biblioteca.IO;
 
 namespace Biblioteca.Personas
 {
-    [XmlInclude(typeof(Empleado))]
-    [XmlInclude(typeof(Cliente))]
     public abstract class Usuarios
     {
         protected string usuario;
@@ -92,6 +91,7 @@ namespace Biblioteca.Personas
             sb.AppendLine($"Apellido: {usuario.apellido}");
             sb.AppendLine($"Edad: {usuario.EdadActual}");
             sb.AppendLine($"DNI: {usuario.dni}");
+           // sb.AppendLine($"Contraseña: {usuario.contraseña.GetSha256()}");
             sb.AppendLine("-------------------");
 
             return sb.ToString();
@@ -117,16 +117,6 @@ namespace Biblioteca.Personas
             }
 
             throw new Exception("Usuario no encontrado");
-        }
-
-        public bool CambiarContraseña(string contraseñaActual,string contraseñaNueva)
-        {
-            if(contraseñaActual == this.contraseña)
-            {
-                this.contraseña = contraseñaNueva;
-                return true;
-            }
-            return false;
         }
 
         #region SobrecargaOperadores

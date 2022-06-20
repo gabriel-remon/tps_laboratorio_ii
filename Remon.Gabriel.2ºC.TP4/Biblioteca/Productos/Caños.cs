@@ -32,11 +32,6 @@ namespace Biblioteca.Productos
             this.tipoCaño = tipoCaño;
         }
 
-      //  public Caños(pro)
-
-
-       
-
         public override string MostrarVenta()
         {
             return $"{codigo}  {descripcion} {largo} de largo   {precio}$ {cantidadVendidos * precio}$ ";

@@ -8,6 +8,8 @@ using Biblioteca.Productos;
 using Biblioteca.DTO;
 using Biblioteca.Personas;
 using System.Data;
+using System.Security.Cryptography;
+using System.Security;
 
 namespace Biblioteca.IO
 {
@@ -67,7 +69,7 @@ namespace Biblioteca.IO
                 comand.CommandText = $"INSERT INTO Cliente VALUES (@usuario,@contraseña,@nombre,@apellido,@fechaNacimiento,@dni,@estadoFiscal)";
                 comand.Parameters.AddWithValue("@estadoFiscal", clientedto.EstadoFiscal);
                 comand.Parameters.AddWithValue("@usuario", clientedto.Usuario);
-                comand.Parameters.AddWithValue("@contraseña", clientedto.Contraseña);
+                comand.Parameters.AddWithValue("@contraseña", clientedto.Contraseña.GetSha256());
                 comand.Parameters.AddWithValue("@nombre", clientedto.Nombre);
                 comand.Parameters.AddWithValue("@apellido", clientedto.Apellido);
                 comand.Parameters.AddWithValue("@fechaNacimiento", clientedto.FechaNacimiento);
@@ -98,7 +100,7 @@ namespace Biblioteca.IO
                 comand.Parameters.AddWithValue("@sueldo", empleadoDto.Sueldo);
                 comand.Parameters.AddWithValue("@cargo", empleadoDto.CargoActual);
                 comand.Parameters.AddWithValue("@usuario", empleadoDto.Usuario);
-                comand.Parameters.AddWithValue("@contraseña", empleadoDto.Contraseña);
+                comand.Parameters.AddWithValue("@contraseña", empleadoDto.Contraseña.GetSha256());
                 comand.Parameters.AddWithValue("@nombre", empleadoDto.Nombre);
                 comand.Parameters.AddWithValue("@apellido", empleadoDto.Apellido);
                 comand.Parameters.AddWithValue("@fechaNacimiento", empleadoDto.FechaNacimiento);
@@ -241,6 +243,22 @@ namespace Biblioteca.IO
             {
                 conection.Close();
             }
+        }
+
+        public static string GetSha256(this string s)
+        {
+            SHA256 hash = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = hash.ComputeHash(encoding.GetBytes(s));
+            for(int i = 0; i< stream.Length; i++)
+            {
+                sb.AppendFormat("{0:x2}",stream[i]);
+            }
+
+            return sb.ToString();
+            
         }
 
     }

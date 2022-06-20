@@ -188,9 +188,7 @@ namespace Forms
                 ListaProductos lista = new ListaProductos(this.ferreteria);
                 lista.ShowDialog();
             }
-        }
-
-        
+        }  
 
         /// <summary>
         /// Evento doble click de la lista de pedidos. Al activar el evento
@@ -216,46 +214,6 @@ namespace Forms
             }
         }
 
-        
-
-        /// <summary>
-        /// Guarda el objeto ferreteria en un archivo xml con una ruta ya definida
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        Archivos.Save<FerreteriaDto> guardar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
-        //        guardar.GuardarXml(FerreteriaDao.CrearFerreteriaDto(this.ferreteria));
-        //        MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-
-        /// <summary>
-        /// Carga el objeto ferreteria en un archivo xml con una ruta ya definida
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        Archivos.Save<FerreteriaDto> cargar = new Archivos.Save<FerreteriaDto>(Environment.CurrentDirectory);
-        //        this.ferreteria = FerreteriaDao.CrearOriginal(cargar.CargarXml());
-        //        MessageBox.Show($"Archivo guardado en {Environment.CurrentDirectory}");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-
         private void btnHistorial_Click(object sender, EventArgs e)
         {
             HistorialPedidos historialPedidos;
@@ -272,11 +230,6 @@ namespace Forms
             historialPedidos.ShowDialog();
         }
 
-      
-
-        private void PanelUsuarios_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
 
         private void PanelUsuarios_KeyUp(object sender, KeyEventArgs e)
         {
@@ -285,8 +238,6 @@ namespace Forms
             if (e.KeyCode == Keys.F2) { this.btnHistorial_Click(sender, e); }
             
             if (e.KeyCode == Keys.F3) { this.btnNuevoCliente_Click(sender, e); }
-            
-            //if (e.KeyCode == Keys.F4) { this.btnPedidoDistribuidora_Click(sender, e); }
             
             if (e.KeyCode == Keys.F4) { this.btnNuevoEmpleado_Click(sender, e); }
             
@@ -298,7 +249,6 @@ namespace Forms
 
             if (e.KeyCode == Keys.F8) { this.btnListEmpleados_Click(sender, e); }
 
-           // if (e.KeyCode == Keys.Escape) { this.Close(); }
            
         }
 

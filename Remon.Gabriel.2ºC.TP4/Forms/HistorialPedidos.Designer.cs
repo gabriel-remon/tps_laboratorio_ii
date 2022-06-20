@@ -32,6 +32,7 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -78,6 +79,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Historial de ventas";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 120);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Presionando el boton\r\n   Imprimir todo se\r\nguardara un archivo\r\n     con  todas l" +
+    "as\r\nespecificaciones de \r\nlas ventas realizadas";
+            // 
             // HistorialPedidos
             // 
             this.AcceptButton = this.btnImprimir;
@@ -86,6 +98,7 @@
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(864, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnImprimir);
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -22,10 +22,10 @@ namespace Biblioteca
             fechaCompra = DateTime.Now;
             ventaRealizada = false;
         }
+
         public Venta(Cliente comprador)
             :this()
         {
-            //this.productos = new List<Producto>();
             this.comprador = comprador;
         }
 

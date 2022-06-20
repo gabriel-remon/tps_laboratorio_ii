@@ -1,0 +1,12 @@
+Cliente: DNI: 100204015 - Nombre: Pepe Juanito
+Fecha de la compra: 19/6/2022
+codigo:202033,  Destornillador Philips 4x60   300$c/u --- cantidad Vendidos: 2  sub total: 600$ 
+Total de la venta: $ 600,00
+
+Cliente: DNI: 100204015 - Nombre: Pepe Juanito
+Fecha de la compra: 19/6/2022
+codigo:154001,  Tornillo Bulon metrica: Pulgada   20$c/u --- cantidad Vendidos: 50  sub total: 1000$ 
+codigo:202032,  Destornillador Philips 4x50   250$c/u --- cantidad Vendidos: 4  sub total: 1000$ 
+Total de la venta: $ 2.000,00
+
+
