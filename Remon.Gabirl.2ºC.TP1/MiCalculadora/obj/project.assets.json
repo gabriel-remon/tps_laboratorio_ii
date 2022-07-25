@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gustavo\\.nuget\\packages\\": {},
-    "D:\\visual studio\\shared\\NuGetPackages": {}
+    "C:\\Users\\gabriel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
+      "projectUniqueName": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
       "projectName": "MiCalculadora",
-      "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
-      "packagesPath": "C:\\Users\\gustavo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\obj\\",
+      "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\MiCalculadora.csproj",
+      "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
+      "outputPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\MiCalculadora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\visual studio\\shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -58,8 +58,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\gustavo\\Desktop\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj"
+            "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\programacion\\tps_laboratorio_ii\\Remon.Gabirl.2ºC.TP1\\Entidades\\Entidades.csproj"
             }
           }
         }
@@ -91,7 +91,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
