@@ -18,7 +18,7 @@ namespace Entidades
         {
             set
             {
-                numero= ValidarOperando(value);
+                this.numero= ValidarOperando(value);
             }
         }
 

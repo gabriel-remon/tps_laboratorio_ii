@@ -13,9 +13,9 @@ namespace Entidades
         /// <summary>
         /// Inicializa todos los parametos del vehiculo
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="chasis">Codigo del chasis</param>
+        /// <param name="marca">Marca del vehiculo</param>
+        /// <param name="color">Color del vehiculo</param>
         public Suv(EMarca marca, string chasis, ConsoleColor color)
             : base(chasis, marca, color)
         { }
@@ -38,12 +38,12 @@ namespace Entidades
         /// <summary>
         /// Retorna como un string todos los datos del vehiculo Suv
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Todos los datos del objeto</returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("SUV\n");
+            sb.AppendLine("SUV");
             sb.AppendLine((string)this);
             sb.AppendLine("---------------------");
 

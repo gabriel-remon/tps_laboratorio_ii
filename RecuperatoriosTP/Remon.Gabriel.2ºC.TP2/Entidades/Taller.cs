@@ -39,7 +39,7 @@ namespace Entidades
         /// Inicializa la lista de vehiculos y define la cantidad de espacio 
         /// disponible que tiene el taller
         /// </summary>
-        /// <param name="espacioDisponible"></param>
+        /// <param name="espacioDisponible">Espacio diponible del taller</param>
         public Taller(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -65,7 +65,7 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
-        /// <returns></returns>
+        /// <returns>Un string de todos los vehiculos del tipo requerido</returns>
         public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();

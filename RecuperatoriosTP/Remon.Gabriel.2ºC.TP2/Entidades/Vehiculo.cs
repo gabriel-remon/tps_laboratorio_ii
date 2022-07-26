@@ -37,9 +37,9 @@ namespace Entidades
         /// Constructor de la clase vehiculo, inicializa todos los elementos
         /// pasados por parametro
         /// </summary>
-        /// <param name="chasis"></param>
-        /// <param name="marca"></param>
-        /// <param name="color"></param>
+        /// <param name="chasis">Codigo del chasis</param>
+        /// <param name="marca">Marca del vehiculo</param>
+        /// <param name="color">Color del vehiculo</param>
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
@@ -70,7 +70,7 @@ namespace Entidades
         /// Sobrecarga de la conversion explicita "string", convierte un 
         /// objeto de tipo vehiculo a un string con todos sus datos
         /// </summary>
-        /// <param name="p"></param>
+        /// <param name="p">Elemento a exponer</param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
@@ -87,8 +87,8 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">Primer objeto a comparar</param>
+        /// <param name="v2">Segundo objeto a comparar</param>
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
@@ -97,8 +97,8 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">Primer objeto a comparar</param>
+        /// <param name="v2">Segundo objeto a comparar</param>
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {

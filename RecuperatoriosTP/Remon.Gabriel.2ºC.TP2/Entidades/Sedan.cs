@@ -23,9 +23,10 @@ namespace Entidades
         /// Inicializa todos los parametros del vehiculo con los valores
         /// que fueron pasados como parametro
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="chasis">Codigo del chasis</param>
+        /// <param name="marca">Marca del vehiculo</param>
+        /// <param name="color">Color del vehiculo</param>
+        /// <param name="tipo">Cantidad de puertas</param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo) 
             : base(chasis, marca, color)
         {
@@ -36,9 +37,9 @@ namespace Entidades
         /// Inicializa todos los parametos del vehiculo y define al enumerado 
         /// ETipo como cuatro puestas
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="chasis">Codigo del chasis</param>
+        /// <param name="marca">Marca del vehiculo</param>
+        /// <param name="color">Color del vehiculo</param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color)
                     : this(marca, chasis, color, ETipo.CuatroPuertas)
         {
@@ -62,12 +63,12 @@ namespace Entidades
         /// <summary>
         /// Retorna como un string todos los datos del vehiculo Sedan
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Todos los datos del objeto</returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("SEDAN\n");
+            sb.AppendLine("SEDAN");
             sb.Append((string)this);
             sb.AppendLine($"TIPO : {this.tipo}\n");
             sb.AppendLine("---------------------");
